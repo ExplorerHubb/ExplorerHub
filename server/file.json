@@ -1,0 +1,249 @@
+[
+  {
+    "id": 19,
+    "name": "حديقة الحيوانات",
+    "country_code": "eg",
+    "city": 2,
+    "suburb": "Been Al-Sarayat",
+    "street": "Nahda Masr Street",
+    "formatted": "Giza Zoo, Nahda Masr Street, Been Al-Sarayat, Giza, 12612, Egypt",
+    "categories": [
+      "entertainment",
+      "entertainment.zoo"
+    ],
+    "website": "http://www.gizazoo-eg.com/",
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null,
+    "catering": null,
+    "housenumber": null,
+    "district": null
+  },
+  {
+    "id": 20,
+    "name": "متحف أحمد شوقي",
+    "country_code": "eg",
+    "city": 2,
+    "suburb": "Been Al-Sarayat",
+    "street": "Ahmed Shawki Street",
+    "formatted": "Ahmed Shawqi Museum, Ahmed Shawki Street, Been Al-Sarayat, Giza, 11555, Egypt",
+    "categories": [
+      "entertainment",
+      "entertainment.museum"
+    ],
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null,
+    "catering": null,
+    "housenumber": null,
+    "district": null
+  },
+  {
+    "id": 21,
+    "name": "Galaxy Cinema",
+    "country_code": "eg",
+    "city": 2,
+    "district": "West Al Manial",
+    "suburb": "Al Manyal",
+    "street": "Abd Al Aziz Al Seoud Street",
+    "formatted": "Galaxy Cinema, Abd Al Aziz Al Seoud Street, Al Manyal, Cairo, 11555, Egypt",
+    "categories": [
+      "building",
+      "building.entertainment",
+      "entertainment",
+      "entertainment.cinema"
+    ],
+    "opening_hours": "08:00-2:00",
+    "website": null,
+    "phone": null,
+    "email": null,
+    "facilities": null,
+    "catering": null,
+    "housenumber": null
+  },
+  {
+    "id": 22,
+    "name": "جالاكسي",
+    "country_code": "eg",
+    "city": 2,
+    "suburb": "Al Manyal",
+    "street": "Abd Al Rahman Al Barqoqy Street",
+    "formatted": "Galaxy, Abd Al Rahman Al Barqoqy Street, Al Manyal, Cairo, 11553, Egypt",
+    "categories": [
+      "entertainment",
+      "entertainment.cinema"
+    ],
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null,
+    "catering": null,
+    "housenumber": null,
+    "district": null
+  },
+  {
+    "id": 23,
+    "name": "فاتن حمامة",
+    "country_code": "eg",
+    "city": 2,
+    "district": "East Al Manial",
+    "suburb": "Al Manyal",
+    "street": "Al Rouda Street",
+    "formatted": "Faten Hamama Cinema, Al Rouda Street, Al Manyal, Cairo, 11553, Egypt",
+    "categories": [
+      "building",
+      "building.entertainment",
+      "building.historic",
+      "entertainment",
+      "entertainment.cinema",
+      "tourism",
+      "tourism.sights"
+    ],
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null,
+    "catering": null,
+    "housenumber": null
+  },
+  {
+    "id": 24,
+    "name": "المتحف القومى للحضارة المصرية",
+    "country_code": "eg",
+    "city": 2,
+    "district": "Neighbourhood 2",
+    "suburb": "Fostat",
+    "street": "Al Fostat Street",
+    "formatted": "National Museum of Egyptian Civilisation, Al Fostat Street, Fostat, Cairo, 11923, Egypt",
+    "categories": [
+      "building",
+      "building.tourism",
+      "entertainment",
+      "entertainment.museum"
+    ],
+    "website": "https://nmec.gov.eg",
+    "opening_hours": "Sa-Th 09:00-17:00",
+    "phone": null,
+    "email": null,
+    "facilities": null,
+    "catering": null,
+    "housenumber": null
+  },
+  {
+    "id": 25,
+    "name": "متحف أم كلثوم",
+    "country_code": "eg",
+    "city": 2,
+    "district": "Al Roda and Al Mekyas",
+    "suburb": "Masr Al-Qadima",
+    "street": "Al Malek Al Saleh Street",
+    "formatted": "Om Kalthom Museum, Al Malek Al Saleh Street, Masr Al-Qadima, Cairo, 11632, Egypt",
+    "categories": [
+      "entertainment",
+      "entertainment.museum"
+    ],
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null,
+    "catering": null,
+    "housenumber": null
+  },
+  {
+    "id": 26,
+    "name": "المتحف القومي للحضارة المصرية",
+    "country_code": "eg",
+    "city": 2,
+    "district": "Neighbourhood 2",
+    "suburb": "Fostat",
+    "street": "Al Fostat Street",
+    "formatted": "National Museum of Egyptian Civilization, Al Fostat Street, Fostat, Cairo, 11923, Egypt",
+    "categories": [
+      "entertainment",
+      "entertainment.museum"
+    ],
+    "website": "https://nmec.gov.eg/",
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null,
+    "catering": null,
+    "housenumber": null
+  },
+  {
+    "id": 27,
+    "name": "المتحف القبطى",
+    "country_code": "eg",
+    "city": 2,
+    "suburb": "Masr Al-Qadima",
+    "street": "Harit Al Kidees Pastoros",
+    "formatted": "The Coptic Museum, Harit Al Kidees Pastoros, Masr Al-Qadima, Cairo, 11632, Egypt",
+    "categories": [
+      "entertainment",
+      "entertainment.museum",
+      "wheelchair",
+      "wheelchair.yes"
+    ],
+    "website": "http://www.coptic-cairo.com/museum/museum.html",
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": {
+      "wheelchair": true
+    },
+    "catering": null,
+    "housenumber": null,
+    "district": null
+  },
+  {
+    "id": 28,
+    "name": "درب ١٧١٨",
+    "country_code": "eg",
+    "city": 2,
+    "suburb": "Masr Al-Qadima",
+    "street": "Dar Al Salam Street",
+    "formatted": "Darb 1718, Dar Al Salam Street, Masr Al-Qadima, Cairo, 11632, Egypt",
+    "categories": [
+      "entertainment",
+      "entertainment.culture",
+      "entertainment.culture.arts_centre"
+    ],
+    "website": "https://www.darb1718.com/",
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null,
+    "catering": null,
+    "housenumber": null,
+    "district": null
+  },
+  {
+    "id": 29,
+    "name": "قصر الثقافه",
+    "country_code": "eg",
+    "city": 2,
+    "street": "Al Yaban Street",
+    "formatted": "Qasr Al-Thaqafa, Al Yaban Street, Giza, 12551, Egypt",
+    "categories": [
+      "building",
+      "building.entertainment",
+      "entertainment",
+      "entertainment.culture",
+      "entertainment.culture.arts_centre"
+    ],
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null,
+    "catering": null,
+    "housenumber": null,
+    "district": null
+  }
+]
