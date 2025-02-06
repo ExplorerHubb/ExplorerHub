@@ -1,0 +1,503 @@
+{
+    
+    "features": [
+    
+      {
+        
+        
+          "name": "Le Grillon",
+          
+          "country_code": "eg",
+          
+          "city": "Cairo",
+          
+          "district": "Al Ismalia",
+          "suburb": "Bab al Luq",
+          "street": "Kasr El Nil Street",
+          "housenumber": "8",
+          
+          "formatted": "Le Grillon, 8 Kasr El Nil Street, Bab al Luq, Cairo, 11519, Egypt",
+          
+          "categories": "catering"
+            
+            
+            
+         
+          
+          
+          
+      },
+      {
+    
+        
+          
+          "country_code": "eg",
+          
+          "city": "Cairo",
+          
+          "district": "Al Ismalia",
+          "suburb": "Bab al Luq",
+          "street": "Kasr El Nil Street",
+          "housenumber": "12",
+          
+          "formatted": "12 Kasr El Nil Street, Bab al Luq, Cairo, 11519, Egypt",
+          
+          "categories": [
+            "building",
+            "building.catering",
+            "catering",
+            "catering.cafe"
+          ]
+          
+          
+      },
+      
+      {
+        
+        
+          "name": "Lotus Bar",
+          
+          "country_code": "eg",
+          
+          "city": "Cairo",
+          
+          "district": "Al Ismalia",
+          "suburb": "Bab al Luq",
+          "street": "Talaat Harb Street",
+          "housenumber": "12",
+          
+          "formatted": "Lotus Bar, 12 Talaat Harb Street, Bab al Luq, Cairo, 11519, Egypt",
+          
+          "categories": "catering"
+            
+        
+        
+      },
+      {
+        
+        
+          "name": "Caf",
+          
+          "country_code": "eg",
+          
+          "city": "Cairo",
+          
+          "district": "Al Ismalia",
+          "suburb": "Bab al Luq",
+          "street": "Wasem Hassn Street",
+          
+          "formatted": "Caf, Wasem Hassn Street, Bab al Luq, Cairo, 11556, Egypt",
+          
+          "categories": "catering",
+            
+            
+          
+          
+          "website": "https://www.cafcafeeg.zyda.com/",
+          "opening_hours": "Mo-Su 09:00-17:00",
+          
+            "phone": "+20 10 04208625",
+            "email": "caf.museum@tradefy.com"
+          
+          
+        
+        
+      },
+      {
+        
+        
+          "name": "Stella bar",
+         
+          "country_code": "eg",
+          
+          "city": "Cairo",
+          
+          "district": "Al Ismalia",
+          "suburb": "Bab al Luq",
+          "street": "Talaat Harb Street",
+          
+          "formatted": "Stella bar, Talaat Harb Street, Bab al Luq, Cairo, 11556, Egypt",
+          
+          "categories": [
+            "catering",
+            "catering.bar"
+          ]
+        
+        
+      },
+      {
+       
+          "name": "Felfela",
+          
+          "country_code": "eg",
+          
+          "city": "Cairo",
+          
+          "district": "Al Ismalia",
+          "suburb": "Bab al Luq",
+          "street": "Talaat Harb Street",
+          "housenumber": "15",
+          
+          "formatted": "Felfela, 15 Talaat Harb Street, Bab al Luq, Cairo, 11519, Egypt",
+          
+          "categories": [
+            "catering",
+            "catering.restaurant",
+            "catering.restaurant.turkish"
+          ]
+          
+        
+         
+       
+      },
+      {
+        
+          "name": "La Poire",
+          
+          "country_code": "eg",
+          
+          "city": "Cairo",
+          
+          "district": "Al Ismalia",
+          "suburb": "Bab al Luq",
+          "street": "Abd Al Salam Aref Street",
+          
+          "formatted": "La Poire, Abd Al Salam Aref Street, Bab al Luq, Cairo, 11513, Egypt",
+          
+          "categories": [
+            "catering",
+            "catering.cafe",
+            "catering.cafe.coffee",
+            "catering.cafe.coffee_shop",
+            "internet_access"
+          ],
+          
+          
+          "website": "http://www.lapoire.me/",
+          
+          "facilities": {
+            "internet_access": true
+          },
+          "catering": {
+            "cuisine": "coffee_shop"
+          }
+          
+       
+      },
+      {
+        
+        
+          "name": "Bab El-Sharq",
+          
+          "country_code": "eg",
+         
+          "city": "Cairo",
+          
+          "district": "Al Ismalia",
+          "suburb": "Bab al Luq",
+          "street": "Wasem Hassn Street",
+          
+          "formatted": "Bab El-Sharq, Wasem Hassn Street, Bab al Luq, Cairo, 11556, Egypt",
+          
+          "categories": [
+            "catering",
+            "catering.restaurant"
+          ]
+          
+         
+        
+      },
+      {
+        
+        
+          "name": "CaiRoma",
+         
+          "country_code": "eg",
+          
+          "city": "Cairo",
+          
+          "district": "Bab El Louk",
+          "suburb": "Abdin",
+          "street": "Youssef Al Gendy Street",
+          "housenumber": "19",
+          
+          "formatted": "CaiRoma, 19 Youssef Al Gendy Street, Abdin, Cairo, 11513, Egypt",
+          
+          "categories": [
+            "building",
+            "building.catering",
+            "catering",
+            "catering.restaurant",
+            "catering.restaurant.italian"
+          ],
+          
+          
+          
+          "catering": {
+            "cuisine": "italian"
+          }
+          
+        
+      },
+      {
+        
+          "name": "التحرير",
+          
+          "country_code": "eg",
+          
+          "city": "Cairo",
+          
+          "district": "El Dawadin",
+          "suburb": "Bab al Luq",
+          "street": "Youssef Al Gendy Street",
+         
+          "formatted": "El Tahrir, Youssef Al Gendy Street, Bab al Luq, Cairo, 11519, Egypt",
+          
+          "categories": [
+            "catering",
+            "catering.fast_food",
+            "kosher"
+          ],
+          
+          
+          
+          "catering": {
+            "diet": {
+              "kosher": true
+            }
+          }
+          
+      },
+      {
+        
+          "name": "Fatatri At Tahrir",
+          
+          "country_code": "eg",
+          
+          "city": "Cairo",
+          
+          "district": "Bab El Louk",
+          "suburb": "Abdin",
+          "street": "Al Tahrir Street",
+          "housenumber": "2",
+          
+          
+          "categories": [
+            "building",
+            "building.catering",
+            "catering",
+            "catering.restaurant",
+            "catering.restaurant.regional"
+          ],
+          "catering": {
+            "cuisine": "regional"
+          }
+          
+      },
+      {
+        
+          "name": "Hardee's",
+          
+          "country_code": "eg",
+          
+          "city": "Cairo",
+          
+          "district": "El Dawadin",
+          "suburb": "Abdin",
+          "street": "Al Qasr Al Eini Street",
+          "housenumber": "3",
+         
+          "formatted": "Hardee's, 3 Al Qasr Al Eini Street, Abdin, Cairo, 11513, Egypt",
+          
+          "categories": [
+            "catering",
+            "catering.fast_food",
+            "catering.fast_food.burger"
+          ],
+          "details": [
+            "details",
+            "details.catering",
+            "details.facilities"
+          ],
+          
+          
+          "facilities": {
+            "takeaway": true
+          },
+          "catering": {
+            "cuisine": "burger"
+          }
+          
+      },
+      {
+        
+          "name": "Pizza Hut",
+          
+          "country_code": "eg",
+         
+          "city": "Cairo",
+          
+          "district": "El Dawadin",
+          "suburb": "Bab al Luq",
+          "street": "Al Amir Qadadar Alley",
+          
+          "formatted": "Pizza Hut, Al Amir Qadadar Alley, Bab al Luq, Cairo, 11519, Egypt",
+          
+          "categories": [
+            "catering",
+            "catering.restaurant",
+            "catering.restaurant.pizza"
+          ],
+          
+          
+         
+          "catering": {
+            "cuisine": "pizza"
+          }
+          
+       
+      },
+      {
+        
+        
+          "name": "Cilantro",
+        
+          "country_code": "eg",
+          
+          "city": "Cairo",
+          
+          "district": "El Dawadin",
+          "suburb": "Bab al Luq",
+          "street": "Mohamed Mahmoud Street",
+          
+          "formatted": "Cilantro, Mohamed Mahmoud Street, Bab al Luq, Cairo, 11513, Egypt",
+          
+          "categories": [
+            "catering",
+            "catering.cafe",
+            "catering.cafe.coffee",
+            "catering.cafe.coffee_shop",
+            "internet_access",
+            "internet_access.free"
+          ],
+          
+         
+          "facilities": {
+            "internet_access": true
+          },
+          "catering": {
+            "cuisine": "coffee_shop"
+          }
+          
+      },
+      {
+        
+          "name": "McDonald's",
+          
+          "country_code": "eg",
+          
+          "city": "Cairo",
+          
+          "district": "El Dawadin",
+          "suburb": "Bab al Luq",
+          "street": "Al Amir Qadadar Street",
+          
+          "formatted": "McDonald's, Al Amir Qadadar Street, Bab al Luq, Cairo, 11519, Egypt",
+          
+          "categories": [
+            "catering",
+            "catering.fast_food",
+            "catering.fast_food.burger"
+          ],
+          
+          
+          
+          "facilities": {
+            "takeaway": true
+          },
+          "catering": {
+            "cuisine": "burger"
+          }
+          
+        
+      },
+      {
+       
+          "name": "Oldish",
+          
+          "country_code": "eg",
+          
+          "city": "Cairo",
+          
+          "district": "El Dawadin",
+          "suburb": "Bab al Luq",
+          "street": "Mohamed Mahmoud Street",
+          
+          "formatted": "Oldish, Mohamed Mahmoud Street, Bab al Luq, Cairo, 11513, Egypt",
+          
+          "categories": [
+            "catering",
+            "catering.cafe",
+            "catering.cafe.coffee",
+            "catering.cafe.coffee_shop"
+          ],
+          
+         
+         
+          "catering": {
+            "cuisine": "coffee_shop"
+          }
+          
+        
+      },
+      {
+        
+        
+          "name": "Oldish",
+          
+          "country_code": "eg",
+         
+          "city": "Cairo",
+          
+          "district": "El Dawadin",
+          "suburb": "Bab al Luq",
+          "street": "Mohamed Mahmoud Street",
+         
+          "formatted": "Oldish, Mohamed Mahmoud Street, Bab al Luq, Cairo, 11513, Egypt",
+          
+          "categories": [
+            "catering",
+            "catering.cafe"
+          ]
+          
+         
+        
+      },
+      {
+        
+        
+          "name": "Sabaya",
+          
+          "country_code": "eg",
+          
+          "city": "Cairo",
+          
+          "district": "Qasr Al Doubara",
+          "suburb": "Bab al Luq",
+          "street": "Abd Al Qader Hamza Street",
+          
+          "formatted": "Sabaya, Abd Al Qader Hamza Street, Bab al Luq, Cairo, 11519, Egypt",
+          
+          "categories": [
+            "catering",
+            "catering.restaurant",
+            "catering.restaurant.lebanese"
+          ],
+          
+          "catering": {
+            "cuisine": "lebanese"
+          }
+          
+      }
+    ]
+  }
