@@ -75,3 +75,47 @@ class EntertainmentPlace(models.Model):
 
     def __str__(self):
         return self.name
+    
+class ShoppingMallsPlace(models.Model):
+    name = models.CharField(max_length=200,null=True)
+    country_code = models.CharField(max_length=10)
+    city = models.ForeignKey(City,on_delete=models.CASCADE,related_name='shopping_place')
+    district = models.TextField(null=True,blank=True)
+    suburb = models.TextField(null=True,blank=True)
+    street = models.TextField(null=True,blank=True)
+    formatted = models.TextField(null=True,blank=True)
+    categories = models.CharField(max_length=100)
+    
+    house_number = models.CharField(max_length=1000,null=True,blank=True)
+    website = models.URLField(max_length=100,null=True,blank=True)
+    opening_hours = models.CharField(max_length=200,null=True,blank=True)
+    contact = models.CharField(max_length=100,null=True,blank=True)
+    facilities = models.CharField(max_length=100,null=True,blank=True)
+   
+    phone = models.CharField(max_length=50,null=True,blank=True)
+    email = models.EmailField(max_length=200,null=True,blank=True)
+
+    def __str__(self):
+        return self.name
+    
+
+class Accommodation(models.Model):
+    name = models.CharField(max_length=200,null=True)
+    country_code = models.CharField(max_length=10)
+    city = models.ForeignKey(City,on_delete=models.CASCADE,related_name='accommodation')
+    district = models.TextField(null=True,blank=True)
+    suburb = models.TextField(null=True,blank=True)
+    street = models.TextField(null=True,blank=True)
+    formatted = models.TextField(null=True,blank=True)
+    categories = models.CharField(max_length=100)
+    
+    house_number = models.CharField(max_length=1000,null=True,blank=True)
+    website = models.URLField(max_length=100,null=True,blank=True)
+    opening_hours = models.CharField(max_length=200,null=True,blank=True)
+    contact = models.CharField(max_length=100,null=True,blank=True)
+    facilities = models.CharField(max_length=100,null=True,blank=True)
+    phone = models.CharField(max_length=50,null=True,blank=True)
+    email = models.EmailField(max_length=200,null=True,blank=True)
+
+    def __str__(self):
+        return self.name

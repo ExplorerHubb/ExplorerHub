@@ -1,249 +1,211 @@
 [
   {
-    "id": 19,
-    "name": "حديقة الحيوانات",
+    "id": 61,
+    "name": "فيلا البنا",
     "country_code": "eg",
-    "city": 2,
-    "suburb": "Been Al-Sarayat",
-    "street": "Nahda Masr Street",
-    "formatted": "Giza Zoo, Nahda Masr Street, Been Al-Sarayat, Giza, 12612, Egypt",
+    "city": 4,
+    "street": "Mahmoud Al Samary Street",
+    "formatted": "فيلا البنا, Mahmoud Al Samary Street, Kafr Shokr City, 13718, Egypt",
     "categories": [
-      "entertainment",
-      "entertainment.zoo"
-    ],
-    "website": "http://www.gizazoo-eg.com/",
-    "opening_hours": null,
-    "phone": null,
-    "email": null,
-    "facilities": null,
-    "catering": null,
-    "housenumber": null,
-    "district": null
+      "accommodation",
+      "accommodation.guest_house"
+    ]
   },
   {
-    "id": 20,
-    "name": "متحف أحمد شوقي",
+    "id": 62,
+    "name": "ابو عاطف",
     "country_code": "eg",
-    "city": 2,
-    "suburb": "Been Al-Sarayat",
-    "street": "Ahmed Shawki Street",
-    "formatted": "Ahmed Shawqi Museum, Ahmed Shawki Street, Been Al-Sarayat, Giza, 11555, Egypt",
+    "city": 4,
+    "street": "Sayed Abd Allah Abou Ali Street",
+    "formatted": "ابو عاطف, Sayed Abd Allah Abou Ali Street, Banha, 13826, Egypt",
     "categories": [
-      "entertainment",
-      "entertainment.museum"
+      "accommodation",
+      "accommodation.guest_house",
+      "internet_access"
     ],
-    "website": null,
-    "opening_hours": null,
-    "phone": null,
-    "email": null,
-    "facilities": null,
-    "catering": null,
-    "housenumber": null,
-    "district": null
-  },
-  {
-    "id": 21,
-    "name": "Galaxy Cinema",
-    "country_code": "eg",
-    "city": 2,
-    "district": "West Al Manial",
-    "suburb": "Al Manyal",
-    "street": "Abd Al Aziz Al Seoud Street",
-    "formatted": "Galaxy Cinema, Abd Al Aziz Al Seoud Street, Al Manyal, Cairo, 11555, Egypt",
-    "categories": [
-      "building",
-      "building.entertainment",
-      "entertainment",
-      "entertainment.cinema"
-    ],
-    "opening_hours": "08:00-2:00",
-    "website": null,
-    "phone": null,
-    "email": null,
-    "facilities": null,
-    "catering": null,
-    "housenumber": null
-  },
-  {
-    "id": 22,
-    "name": "جالاكسي",
-    "country_code": "eg",
-    "city": 2,
-    "suburb": "Al Manyal",
-    "street": "Abd Al Rahman Al Barqoqy Street",
-    "formatted": "Galaxy, Abd Al Rahman Al Barqoqy Street, Al Manyal, Cairo, 11553, Egypt",
-    "categories": [
-      "entertainment",
-      "entertainment.cinema"
-    ],
-    "website": null,
-    "opening_hours": null,
-    "phone": null,
-    "email": null,
-    "facilities": null,
-    "catering": null,
-    "housenumber": null,
-    "district": null
-  },
-  {
-    "id": 23,
-    "name": "فاتن حمامة",
-    "country_code": "eg",
-    "city": 2,
-    "district": "East Al Manial",
-    "suburb": "Al Manyal",
-    "street": "Al Rouda Street",
-    "formatted": "Faten Hamama Cinema, Al Rouda Street, Al Manyal, Cairo, 11553, Egypt",
-    "categories": [
-      "building",
-      "building.entertainment",
-      "building.historic",
-      "entertainment",
-      "entertainment.cinema",
-      "tourism",
-      "tourism.sights"
-    ],
-    "website": null,
-    "opening_hours": null,
-    "phone": null,
-    "email": null,
-    "facilities": null,
-    "catering": null,
-    "housenumber": null
-  },
-  {
-    "id": 24,
-    "name": "المتحف القومى للحضارة المصرية",
-    "country_code": "eg",
-    "city": 2,
-    "district": "Neighbourhood 2",
-    "suburb": "Fostat",
-    "street": "Al Fostat Street",
-    "formatted": "National Museum of Egyptian Civilisation, Al Fostat Street, Fostat, Cairo, 11923, Egypt",
-    "categories": [
-      "building",
-      "building.tourism",
-      "entertainment",
-      "entertainment.museum"
-    ],
-    "website": "https://nmec.gov.eg",
-    "opening_hours": "Sa-Th 09:00-17:00",
-    "phone": null,
-    "email": null,
-    "facilities": null,
-    "catering": null,
-    "housenumber": null
-  },
-  {
-    "id": 25,
-    "name": "متحف أم كلثوم",
-    "country_code": "eg",
-    "city": 2,
-    "district": "Al Roda and Al Mekyas",
-    "suburb": "Masr Al-Qadima",
-    "street": "Al Malek Al Saleh Street",
-    "formatted": "Om Kalthom Museum, Al Malek Al Saleh Street, Masr Al-Qadima, Cairo, 11632, Egypt",
-    "categories": [
-      "entertainment",
-      "entertainment.museum"
-    ],
-    "website": null,
-    "opening_hours": null,
-    "phone": null,
-    "email": null,
-    "facilities": null,
-    "catering": null,
-    "housenumber": null
-  },
-  {
-    "id": 26,
-    "name": "المتحف القومي للحضارة المصرية",
-    "country_code": "eg",
-    "city": 2,
-    "district": "Neighbourhood 2",
-    "suburb": "Fostat",
-    "street": "Al Fostat Street",
-    "formatted": "National Museum of Egyptian Civilization, Al Fostat Street, Fostat, Cairo, 11923, Egypt",
-    "categories": [
-      "entertainment",
-      "entertainment.museum"
-    ],
-    "website": "https://nmec.gov.eg/",
-    "opening_hours": null,
-    "phone": null,
-    "email": null,
-    "facilities": null,
-    "catering": null,
-    "housenumber": null
-  },
-  {
-    "id": 27,
-    "name": "المتحف القبطى",
-    "country_code": "eg",
-    "city": 2,
-    "suburb": "Masr Al-Qadima",
-    "street": "Harit Al Kidees Pastoros",
-    "formatted": "The Coptic Museum, Harit Al Kidees Pastoros, Masr Al-Qadima, Cairo, 11632, Egypt",
-    "categories": [
-      "entertainment",
-      "entertainment.museum",
-      "wheelchair",
-      "wheelchair.yes"
-    ],
-    "website": "http://www.coptic-cairo.com/museum/museum.html",
-    "opening_hours": null,
-    "phone": null,
-    "email": null,
+    "opening_hours": "Mo-Su 09:00-18:00",
     "facilities": {
-      "wheelchair": true
-    },
-    "catering": null,
-    "housenumber": null,
-    "district": null
+      "internet_access": true
+    }
   },
   {
-    "id": 28,
-    "name": "درب ١٧١٨",
+    "id": 63,
+    "name": "عرب الخلوه",
     "country_code": "eg",
-    "city": 2,
-    "suburb": "Masr Al-Qadima",
-    "street": "Dar Al Salam Street",
-    "formatted": "Darb 1718, Dar Al Salam Street, Masr Al-Qadima, Cairo, 11632, Egypt",
+    "city": 4,
+    "street": "Swilam Soliman Alley",
+    "formatted": "arab elkiloa, Swilam Soliman Alley, 13814, Egypt",
     "categories": [
-      "entertainment",
-      "entertainment.culture",
-      "entertainment.culture.arts_centre"
-    ],
-    "website": "https://www.darb1718.com/",
-    "opening_hours": null,
-    "phone": null,
-    "email": null,
-    "facilities": null,
-    "catering": null,
-    "housenumber": null,
-    "district": null
+      "accommodation",
+      "accommodation.hut"
+    ]
   },
   {
-    "id": 29,
-    "name": "قصر الثقافه",
+    "id": 64,
+    "name": "منزل الحاج مجدى أبونصر",
     "country_code": "eg",
-    "city": 2,
-    "street": "Al Yaban Street",
-    "formatted": "Qasr Al-Thaqafa, Al Yaban Street, Giza, 12551, Egypt",
+    "city": 4,
+    "street": "Al Sifa, Al Salheya Road",
+    "housenumber": "2",
+    "formatted": "منزل الحاج مجدى أبونصر, 2 Al Sifa, Al Salheya Road, As-Siyafa, 13729, Egypt",
     "categories": [
-      "building",
-      "building.entertainment",
-      "entertainment",
-      "entertainment.culture",
-      "entertainment.culture.arts_centre"
+      "accommodation",
+      "accommodation.guest_house"
+    ]
+  },
+  {
+    "id": 65,
+    "name": "منزل الحاج مجدى محمد أبونصر",
+    "country_code": "eg",
+    "city": 4,
+    "street": "Kafr Al Foqaha', Al Qanater Al Khairia Road",
+    "formatted": "منزل الحاج مجدى محمد أبونصر, Kafr Al Foqaha', Al Qanater Al Khairia Road, As-Siyafa, 13789, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.guest_house"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "منزل ا. حسام",
+    "country_code": "eg",
+    "city": 4,
+    "street": "Nafei Ouda Street",
+    "formatted": "Mr.Hossam, Nafei Ouda Street, 13749, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.apartment"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "كفر سندوة",
+    "country_code": "eg",
+    "city": 4,
+    "street": "Omar Mohamed Alley",
+    "formatted": "كفر سندوة, Omar Mohamed Alley, Kafr Tahha, 13852, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.hut"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "كفر سندوة",
+    "country_code": "eg",
+    "city": 4,
+    "street": "Abd Allah Alley",
+    "formatted": "كفر سندوة, Abd Allah Alley, Kafr Tahha, 13852, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.hut"
+    ]
+  },
+  {
+    "id": 69,
+    "name": "البيت العبور",
+    "country_code": "eg",
+    "city": 4,
+    "district": "District 5",
+    "street": "Al Mostashar Atef Zaki Street",
+    "formatted": "home, Al Mostashar Atef Zaki Street, El Obour, 11828, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.apartment"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "فيلا شكشك السابع",
+    "country_code": "eg",
+    "city": 4,
+    "district": "District 7",
+    "street": "Amid Mohamed Abd Al Aziz Kabil Street",
+    "formatted": "Shakshak villa, Amid Mohamed Abd Al Aziz Kabil Street, El Obour, 02000, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.apartment"
+    ]
+  },
+  {
+    "id": 71,
+    "name": "المحموديه 960",
+    "country_code": "eg",
+    "city": 4,
+    "district": "Western Extension",
+    "street": "Street 1000",
+    "housenumber": "بلوك13 مدخل 1",
+    "formatted": "المحموديه 960, بلوك13 مدخل 1 Street 1000, El Obour, 11785, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.hut",
+      "internet_access"
     ],
-    "website": null,
-    "opening_hours": null,
-    "phone": null,
-    "email": null,
-    "facilities": null,
-    "catering": null,
-    "housenumber": null,
-    "district": null
+    "facilities": {
+      "internet_access": true
+    }
+  },
+  {
+    "id": 72,
+    "name": "منزل ابو حسونة",
+    "country_code": "eg",
+    "city": 4,
+    "street": "Al Mazlakan Street",
+    "formatted": "منزل ابو حسونة, Al Mazlakan Street, Mit Halfa, 13614, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.hostel"
+    ]
+  },
+  {
+    "id": 73,
+    "name": "البيت",
+    "country_code": "eg",
+    "city": 4,
+    "street": "Ateya Street",
+    "formatted": "البيت, Ateya Street, Shubra al Khayma, 11833, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.apartment"
+    ]
+  },
+  {
+    "id": 74,
+    "name": "نبيل سمير",
+    "country_code": "eg",
+    "city": 4,
+    "street": "Al Ikhlas Street",
+    "formatted": "Nabil Samir, Al Ikhlas Street, Al Khusus, 13774, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.guest_house"
+    ]
+  },
+  {
+    "id": 75,
+    "name": "أيمن سمير",
+    "country_code": "eg",
+    "city": 4,
+    "street": "Al Zohor Street",
+    "formatted": "Ayman Sameer, Al Zohor Street, Shubra al Khayma, 11832, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.guest_house"
+    ]
+  },
+  {
+    "id": 76,
+    "name": "اشرف",
+    "country_code": "eg",
+    "city": "Shubra al Khayma",
+    "district": "Bahtim",
+    "suburb": "Bahteem",
+    "street": "Teraa Al Awkaf Street",
+    "housenumber": "شبرأ الخيمة",
+    "formatted": "Ashraf, شبرأ الخيمة Teraa Al Awkaf Street, Bahteem, Shubra al Khayma, 13752, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.hotel"
+    ]
   }
 ]
