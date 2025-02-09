@@ -1,6 +1,6 @@
 import json
 from django.core.management.base import BaseCommand
-from cities.models import CateringPlace,City,EntertainmentPlace
+from cities.models import CateringPlace,City,EntertainmentPlace,ShoppingMallsPlace,Accommodation
 
 class Command(BaseCommand):
     help = 'Import external JSON file data into Djnago database'
@@ -11,7 +11,7 @@ class Command(BaseCommand):
             print(data)
 
         for item in data:
-            EntertainmentPlace.objects.create(
+            Accommodation.objects.create(
                 id=item['id'],
                 name=item['name'],
                 country_code=item['country_code'],
@@ -27,7 +27,7 @@ class Command(BaseCommand):
                 opening_hours=item.get('opening_hours', None),
                 contact=item.get('contact', None),
                 facilities=item.get('facilities', None),
-                catering=item.get('catering', None),
+               
                 phone=item.get('phone', None),
                 email=item.get('email', None)
             )
