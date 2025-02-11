@@ -2,10 +2,16 @@ from django.shortcuts import render,get_object_or_404
 from .models import City
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
-from .serializers import CitySerializer,FamousFoodSerializer,CityCateringSerializer,CityEntertainmentSerializer,CityShoppingSerializer,CityAccommodationSerializer
+from .serializers import CitySerializer,FamousFoodSerializer,CityCateringSerializer,CityEntertainmentSerializer,CityShoppingSerializer,CityAccommodationSerializer,CitynamesSerializer
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.viewsets import ReadOnlyModelViewSet
 # Create your views here.
+
+class CityNamesView(ReadOnlyModelViewSet):
+    permission_classes = [AllowAny]
+    queryset = City.objects.all()
+    serializer_class = CitynamesSerializer
 
 
 class CityView(APIView):

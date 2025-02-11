@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'cities',
     'import_export',
     'corsheaders',
+    'packages',
+    'user_experience',
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -136,6 +138,11 @@ USE_I18N = True
 
 USE_TZ = True
 
+
+import os
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # BASE_DIR is where manage.py is located
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/

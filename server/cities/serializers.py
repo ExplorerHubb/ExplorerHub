@@ -22,6 +22,10 @@ class ShoppingSerializer(serializers.ModelSerializer):
         model = ShoppingMallsPlace
         fields = ['name','country_code','city','district','suburb','street','formatted','categories','house_number','website','opening_hours','contact','facilities','catering','phone','email']  
 
+class CitynamesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = City
+        fields = ['name','type']
 
 
 

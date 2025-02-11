@@ -1,503 +1,296 @@
-{
+[
+  {
     
-    "features": [
-    
-      {
-        
-        
-          "name": "Le Grillon",
-          
-          "country_code": "eg",
-          
-          "city": "Cairo",
-          
-          "district": "Al Ismalia",
-          "suburb": "Bab al Luq",
-          "street": "Kasr El Nil Street",
-          "housenumber": "8",
-          
-          "formatted": "Le Grillon, 8 Kasr El Nil Street, Bab al Luq, Cairo, 11519, Egypt",
-          
-          "categories": "catering"
-            
-            
-            
-         
-          
-          
-          
-      },
-      {
-    
-        
-          
-          "country_code": "eg",
-          
-          "city": "Cairo",
-          
-          "district": "Al Ismalia",
-          "suburb": "Bab al Luq",
-          "street": "Kasr El Nil Street",
-          "housenumber": "12",
-          
-          "formatted": "12 Kasr El Nil Street, Bab al Luq, Cairo, 11519, Egypt",
-          
-          "categories": [
-            "building",
-            "building.catering",
-            "catering",
-            "catering.cafe"
-          ]
-          
-          
-      },
-      
-      {
-        
-        
-          "name": "Lotus Bar",
-          
-          "country_code": "eg",
-          
-          "city": "Cairo",
-          
-          "district": "Al Ismalia",
-          "suburb": "Bab al Luq",
-          "street": "Talaat Harb Street",
-          "housenumber": "12",
-          
-          "formatted": "Lotus Bar, 12 Talaat Harb Street, Bab al Luq, Cairo, 11519, Egypt",
-          
-          "categories": "catering"
-            
-        
-        
-      },
-      {
-        
-        
-          "name": "Caf",
-          
-          "country_code": "eg",
-          
-          "city": "Cairo",
-          
-          "district": "Al Ismalia",
-          "suburb": "Bab al Luq",
-          "street": "Wasem Hassn Street",
-          
-          "formatted": "Caf, Wasem Hassn Street, Bab al Luq, Cairo, 11556, Egypt",
-          
-          "categories": "catering",
-            
-            
-          
-          
-          "website": "https://www.cafcafeeg.zyda.com/",
-          "opening_hours": "Mo-Su 09:00-17:00",
-          
-            "phone": "+20 10 04208625",
-            "email": "caf.museum@tradefy.com"
-          
-          
-        
-        
-      },
-      {
-        
-        
-          "name": "Stella bar",
-         
-          "country_code": "eg",
-          
-          "city": "Cairo",
-          
-          "district": "Al Ismalia",
-          "suburb": "Bab al Luq",
-          "street": "Talaat Harb Street",
-          
-          "formatted": "Stella bar, Talaat Harb Street, Bab al Luq, Cairo, 11556, Egypt",
-          
-          "categories": [
-            "catering",
-            "catering.bar"
-          ]
-        
-        
-      },
-      {
-       
-          "name": "Felfela",
-          
-          "country_code": "eg",
-          
-          "city": "Cairo",
-          
-          "district": "Al Ismalia",
-          "suburb": "Bab al Luq",
-          "street": "Talaat Harb Street",
-          "housenumber": "15",
-          
-          "formatted": "Felfela, 15 Talaat Harb Street, Bab al Luq, Cairo, 11519, Egypt",
-          
-          "categories": [
-            "catering",
-            "catering.restaurant",
-            "catering.restaurant.turkish"
-          ]
-          
-        
-         
-       
-      },
-      {
-        
-          "name": "La Poire",
-          
-          "country_code": "eg",
-          
-          "city": "Cairo",
-          
-          "district": "Al Ismalia",
-          "suburb": "Bab al Luq",
-          "street": "Abd Al Salam Aref Street",
-          
-          "formatted": "La Poire, Abd Al Salam Aref Street, Bab al Luq, Cairo, 11513, Egypt",
-          
-          "categories": [
-            "catering",
-            "catering.cafe",
-            "catering.cafe.coffee",
-            "catering.cafe.coffee_shop",
-            "internet_access"
-          ],
-          
-          
-          "website": "http://www.lapoire.me/",
-          
-          "facilities": {
-            "internet_access": true
-          },
-          "catering": {
-            "cuisine": "coffee_shop"
-          }
-          
-       
-      },
-      {
-        
-        
-          "name": "Bab El-Sharq",
-          
-          "country_code": "eg",
-         
-          "city": "Cairo",
-          
-          "district": "Al Ismalia",
-          "suburb": "Bab al Luq",
-          "street": "Wasem Hassn Street",
-          
-          "formatted": "Bab El-Sharq, Wasem Hassn Street, Bab al Luq, Cairo, 11556, Egypt",
-          
-          "categories": [
-            "catering",
-            "catering.restaurant"
-          ]
-          
-         
-        
-      },
-      {
-        
-        
-          "name": "CaiRoma",
-         
-          "country_code": "eg",
-          
-          "city": "Cairo",
-          
-          "district": "Bab El Louk",
-          "suburb": "Abdin",
-          "street": "Youssef Al Gendy Street",
-          "housenumber": "19",
-          
-          "formatted": "CaiRoma, 19 Youssef Al Gendy Street, Abdin, Cairo, 11513, Egypt",
-          
-          "categories": [
-            "building",
-            "building.catering",
-            "catering",
-            "catering.restaurant",
-            "catering.restaurant.italian"
-          ],
-          
-          
-          
-          "catering": {
-            "cuisine": "italian"
-          }
-          
-        
-      },
-      {
-        
-          "name": "التحرير",
-          
-          "country_code": "eg",
-          
-          "city": "Cairo",
-          
-          "district": "El Dawadin",
-          "suburb": "Bab al Luq",
-          "street": "Youssef Al Gendy Street",
-         
-          "formatted": "El Tahrir, Youssef Al Gendy Street, Bab al Luq, Cairo, 11519, Egypt",
-          
-          "categories": [
-            "catering",
-            "catering.fast_food",
-            "kosher"
-          ],
-          
-          
-          
-          "catering": {
-            "diet": {
-              "kosher": true
-            }
-          }
-          
-      },
-      {
-        
-          "name": "Fatatri At Tahrir",
-          
-          "country_code": "eg",
-          
-          "city": "Cairo",
-          
-          "district": "Bab El Louk",
-          "suburb": "Abdin",
-          "street": "Al Tahrir Street",
-          "housenumber": "2",
-          
-          
-          "categories": [
-            "building",
-            "building.catering",
-            "catering",
-            "catering.restaurant",
-            "catering.restaurant.regional"
-          ],
-          "catering": {
-            "cuisine": "regional"
-          }
-          
-      },
-      {
-        
-          "name": "Hardee's",
-          
-          "country_code": "eg",
-          
-          "city": "Cairo",
-          
-          "district": "El Dawadin",
-          "suburb": "Abdin",
-          "street": "Al Qasr Al Eini Street",
-          "housenumber": "3",
-         
-          "formatted": "Hardee's, 3 Al Qasr Al Eini Street, Abdin, Cairo, 11513, Egypt",
-          
-          "categories": [
-            "catering",
-            "catering.fast_food",
-            "catering.fast_food.burger"
-          ],
-          "details": [
-            "details",
-            "details.catering",
-            "details.facilities"
-          ],
-          
-          
-          "facilities": {
-            "takeaway": true
-          },
-          "catering": {
-            "cuisine": "burger"
-          }
-          
-      },
-      {
-        
-          "name": "Pizza Hut",
-          
-          "country_code": "eg",
-         
-          "city": "Cairo",
-          
-          "district": "El Dawadin",
-          "suburb": "Bab al Luq",
-          "street": "Al Amir Qadadar Alley",
-          
-          "formatted": "Pizza Hut, Al Amir Qadadar Alley, Bab al Luq, Cairo, 11519, Egypt",
-          
-          "categories": [
-            "catering",
-            "catering.restaurant",
-            "catering.restaurant.pizza"
-          ],
-          
-          
-         
-          "catering": {
-            "cuisine": "pizza"
-          }
-          
-       
-      },
-      {
-        
-        
-          "name": "Cilantro",
-        
-          "country_code": "eg",
-          
-          "city": "Cairo",
-          
-          "district": "El Dawadin",
-          "suburb": "Bab al Luq",
-          "street": "Mohamed Mahmoud Street",
-          
-          "formatted": "Cilantro, Mohamed Mahmoud Street, Bab al Luq, Cairo, 11513, Egypt",
-          
-          "categories": [
-            "catering",
-            "catering.cafe",
-            "catering.cafe.coffee",
-            "catering.cafe.coffee_shop",
-            "internet_access",
-            "internet_access.free"
-          ],
-          
-         
-          "facilities": {
-            "internet_access": true
-          },
-          "catering": {
-            "cuisine": "coffee_shop"
-          }
-          
-      },
-      {
-        
-          "name": "McDonald's",
-          
-          "country_code": "eg",
-          
-          "city": "Cairo",
-          
-          "district": "El Dawadin",
-          "suburb": "Bab al Luq",
-          "street": "Al Amir Qadadar Street",
-          
-          "formatted": "McDonald's, Al Amir Qadadar Street, Bab al Luq, Cairo, 11519, Egypt",
-          
-          "categories": [
-            "catering",
-            "catering.fast_food",
-            "catering.fast_food.burger"
-          ],
-          
-          
-          
-          "facilities": {
-            "takeaway": true
-          },
-          "catering": {
-            "cuisine": "burger"
-          }
-          
-        
-      },
-      {
-       
-          "name": "Oldish",
-          
-          "country_code": "eg",
-          
-          "city": "Cairo",
-          
-          "district": "El Dawadin",
-          "suburb": "Bab al Luq",
-          "street": "Mohamed Mahmoud Street",
-          
-          "formatted": "Oldish, Mohamed Mahmoud Street, Bab al Luq, Cairo, 11513, Egypt",
-          
-          "categories": [
-            "catering",
-            "catering.cafe",
-            "catering.cafe.coffee",
-            "catering.cafe.coffee_shop"
-          ],
-          
-         
-         
-          "catering": {
-            "cuisine": "coffee_shop"
-          }
-          
-        
-      },
-      {
-        
-        
-          "name": "Oldish",
-          
-          "country_code": "eg",
-         
-          "city": "Cairo",
-          
-          "district": "El Dawadin",
-          "suburb": "Bab al Luq",
-          "street": "Mohamed Mahmoud Street",
-         
-          "formatted": "Oldish, Mohamed Mahmoud Street, Bab al Luq, Cairo, 11513, Egypt",
-          
-          "categories": [
-            "catering",
-            "catering.cafe"
-          ]
-          
-         
-        
-      },
-      {
-        
-        
-          "name": "Sabaya",
-          
-          "country_code": "eg",
-          
-          "city": "Cairo",
-          
-          "district": "Qasr Al Doubara",
-          "suburb": "Bab al Luq",
-          "street": "Abd Al Qader Hamza Street",
-          
-          "formatted": "Sabaya, Abd Al Qader Hamza Street, Bab al Luq, Cairo, 11519, Egypt",
-          
-          "categories": [
-            "catering",
-            "catering.restaurant",
-            "catering.restaurant.lebanese"
-          ],
-          
-          "catering": {
-            "cuisine": "lebanese"
-          }
-          
-      }
-    ]
+    "name": "مستعمرة الجزاير",
+    "country_code": "eg",
+    "city": 8,
+    "district": null,
+    "suburb": null,
+    "street": "Talkha City, International Coastal Road",
+    "formatted": "Jazair colony, 01011120023 Talkha City, International Coastal Road, Gamasa, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.hut"
+    ],
+    "house_number": "01011120023",
+    "website": null,
+    "opening_hours": null,
+    "phone": "01011120023",
+    "email": null,
+    "facilities": null
+  },
+  {
+    "name": "عبدالحليم طة",
+    "country_code": "eg",
+    "city": 8,
+    "district": null,
+    "suburb": null,
+    "street": "Masjid Al Shaheed Al Medany Street",
+    "formatted": "العربية, Masjid Al Shaheed Al Medany Street, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.apartment",
+      "internet_access"
+    ],
+    "house_number": null,
+    "website": "http://31.146145, 31.370185",
+    "opening_hours": null,
+    "phone": "01000432020",
+    "email": "abdo0112000@yahoo.com",
+    "facilities": {
+      "internet_access": true
+    }
+  },
+  {
+    "name": "ميت طريف",
+    "country_code": "eg",
+    "city": 8,
+    "district": "Bani Abaid City",
+    "suburb": null,
+    "street": "Teraa Al Malqa Street",
+    "formatted": "meit taref, Teraa Al Malqa Street, Bani Ebeid, 11016, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.apartment"
+    ],
+    "house_number": null,
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null
+  },
+  {
+    "name": "منزل ابراهيم عباس سلامة /بانوب",
+    "country_code": "eg",
+    "city": 8,
+    "district": null,
+    "suburb": null,
+    "street": "Al Merour Road",
+    "formatted": "منزل ابراهيم عباس سلامة /بانوب, Al Merour Road, Batina Village, 31856, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.hostel"
+    ],
+    "house_number": null,
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null
+  },
+  {
+    "name": "مارشال الجزيرة",
+    "country_code": "eg",
+    "city": 8,
+    "district": "First Mit Talkha",
+    "suburb": null,
+    "street": "Marshal Al Gezira Street",
+    "formatted": "Marshal El Gezirah, Marshal Al Gezira Street, Talkha, 35516, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.hotel"
+    ],
+    "house_number": null,
+    "website": null,
+    "opening_hours": null,
+    "phone": "+20 50 2213000",
+    "email": null,
+    "facilities": {
+      "smoking": true
+    }
+  },
+  {
+    "name": "Marshall",
+    "country_code": "eg",
+    "city": 8,
+    "district": "Fifth Siyam",
+    "suburb": null,
+    "street": "Al Mahata Square",
+    "formatted": "Marshall, Al Mahata Square, El Mansura, 35512, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.hotel"
+    ],
+    "house_number": null,
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null
+  },
+  {
+    "name": "منزل استاذه نشوي صالح",
+    "country_code": "eg",
+    "city": 8,
+    "district": "Gedila",
+    "suburb": null,
+    "street": "Abou Gamal Street",
+    "formatted": "private house nashwa saleh, Abou Gamal Street, El Mansura, 35523, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.guest_house"
+    ],
+    "house_number": null,
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null
+  },
+  {
+    "name": "دار الضيافة",
+    "country_code": "eg",
+    "city": 8,
+    "district": "First Mit Talkha",
+    "suburb": null,
+    "street": "Ghehan Al Sadat Street",
+    "formatted": "Guest House, Ghehan Al Sadat Street, Talkha, 35516, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.guest_house"
+    ],
+    "house_number": null,
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null
+  },
+  {
+    "name": "برج العماد",
+    "country_code": "eg",
+    "city": 8,
+    "district": "First Mit Talkha",
+    "suburb": null,
+    "street": "Al Adeeb Street",
+    "formatted": "برج العماد, Al Adeeb Street, El Mansura, 35516, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.apartment"
+    ],
+    "house_number": null,
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null
+  },
+  {
+    "name": "منزل الحاج السيد بدران",
+    "country_code": "eg",
+    "city": 8,
+    "district": null,
+    "suburb": null,
+    "street": "Al Mustashar Mohamed Rida Salama Street",
+    "formatted": "haj Sayed Badran home, 25 Al Mustashar Mohamed Rida Salama Street, 002, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.apartment"
+    ],
+    "house_number": "25",
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null
+  },
+  {
+    "name": "منزل",
+    "country_code": "eg",
+    "city": 8,
+    "district": "Al Senbilawin City",
+    "suburb": null,
+    "street": "Al Shahid Mohamed Abd Al Zaher Al Azab Street",
+    "formatted": "منزل, Al Shahid Mohamed Abd Al Zaher Al Azab Street, El Senbellawein, 35651, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.hostel"
+    ],
+    "house_number": null,
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null
+  },
+  {
+    "name": "New Marshal Hotel",
+    "country_code": "eg",
+    "city": 8,
+    "district": "Al Senbilawin City",
+    "suburb": null,
+    "street": "Al Maahad Street",
+    "formatted": "New Marshal Hotel, Al Maahad Street, El Senbellawein, 35651, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.hotel"
+    ],
+    "house_number": null,
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null
+  },
+  {
+    "name": "صلاح يوسف شريف",
+    "country_code": "eg",
+    "city": 8,
+    "district": null,
+    "suburb": null,
+    "street": "Al Ibrahimeya, Diarb Negm Road",
+    "formatted": "صلاح يوسف شريف, Al Ibrahimeya, Diarb Negm Road, 44852, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.guest_house"
+    ],
+    "house_number": null,
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null
+  },
+  {
+    "name": "بشلا",
+    "country_code": "eg",
+    "city": 8,
+    "district": null,
+    "suburb": null,
+    "street": "Al Mansoura, Mit Ghamr Road",
+    "formatted": "Beshla, 88 Al Mansoura, Mit Ghamr Road, Mit Ghamr, 35774, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.hostel",
+      "internet_access"
+    ],
+    "house_number": "88",
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": {
+      "internet_access": true
+    }
+  },
+  {
+    "name": "المفارق",
+    "country_code": "eg",
+    "city": 8,
+    "district": null,
+    "suburb": null,
+    "street": "Ibn Anan Al Ra'eisy Road",
+    "formatted": "المفارق, Ibn Anan Al Ra'eisy Road, ميت ابو خالد, 14666, Egypt",
+    "categories": [
+      "accommodation",
+      "accommodation.hostel"
+    ],
+    "house_number": null,
+    "website": null,
+    "opening_hours": null,
+    "phone": null,
+    "email": null,
+    "facilities": null
   }
+]

@@ -6,6 +6,7 @@ from django.contrib.auth.models import AbstractUser
 
 class CustomUser(AbstractUser):
     email = models.EmailField(unique=True,null=False,blank=False)
+    
 
 # with connection.cursor() as cursor:
 #     cursor.execute("DROP TABLE IF EXISTS auth_user;")
@@ -21,7 +22,7 @@ class CustomUser(AbstractUser):
 # with connection.cursor() as cursor:
 
 #     cursor.execute("DROP TABLE IF EXISTS token_blacklist_outstandingtoken;")
-
+#     cursor.execute("DROP TABLE IF EXISTS token_blacklist_blacklistedtoken;")
 
 
 

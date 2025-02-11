@@ -12,7 +12,7 @@ class Command(BaseCommand):
 
         for item in data:
             Accommodation.objects.create(
-                id=item['id'],
+                
                 name=item['name'],
                 country_code=item['country_code'],
                 city=City.objects.get(id=item['city']),
