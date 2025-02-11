@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../../assets/logo.png'
-import { Link } from 'react-router-dom'
+import { Link as Link } from 'react-router-dom'
+import { Link as ScrollLink } from 'react-scroll'
 import { MdFavoriteBorder } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { IoIosSearch } from "react-icons/io";
@@ -18,13 +19,17 @@ const navbar = ({isAuthenticated , onLogout}) => {
             <div className='flex space-x-4'>
                 <ul className='md:flex hidden items-center gap-3 lg:gap-5 text-[0.8rem] lg:text-[1rem]'>
                     <li className=''>
-                        <Link to='/' className='inline-block px-4 text-white hover:text-secondary duration-200'>Home</Link>                            
+                        <Link to='/' className='inline-block px-4 text-white hover:text-secondary duration-200'>
+                        Home</Link>                            
                     </li>
                     <li>
-                        <Link to='' className='inline-block px-4 text-white hover:text-secondary duration-200'>About</Link>
+                        <ScrollLink to="about" smooth={true} duration={500}
+                         className='inline-block px-4 text-white hover:text-secondary duration-200 cursor-pointer'>
+                            About</ScrollLink>
                     </li>
                     <li>
-                        <Link to='' className='inline-block px-4 text-white hover:text-secondary duration-200'>Contact</Link>
+                        <Link to='' className='inline-block px-4 text-white hover:text-secondary duration-200'>
+                        Contact</Link>
                     </li>
                 </ul>
             </div>
