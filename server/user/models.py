@@ -2,13 +2,19 @@ from django.db import models
 from django.core.validators import EmailValidator
 from django.contrib.auth.models import AbstractUser
 # Create your models here
+from cloudinary.models import CloudinaryField
 
 
 class CustomUser(AbstractUser):
+    choices = [('Female','Female'),('Male','Male')]
     email = models.EmailField(unique=True,null=False,blank=False)
+    gender = models.CharField(max_length = 20,choices=choices,null=True,blank=True)
+    image = CloudinaryField('image', default='user_images/',null=True,blank=True)
+    phone_no = models.CharField(max_length=15,unique=True,null=True,blank=True)
+    country = models.CharField(max_length=100,null=True,blank=True)
     
 
-# with connection.cursor() as cursor:
+# # with connection.cursor() as cursor:
 #     cursor.execute("DROP TABLE IF EXISTS auth_user;")
 #     cursor.execute("DROP TABLE IF EXISTS auth_group;")
 #     cursor.execute("DROP TABLE IF EXISTS auth_permission;")

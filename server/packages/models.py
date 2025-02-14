@@ -1,7 +1,7 @@
 from django.db import models
 from cities.models  import City
 # Create your models here.
-
+from cloudinary.models import CloudinaryField
 
 class PackagePlace(models.Model):
     choices = [
@@ -16,7 +16,46 @@ class PackagePlace(models.Model):
     description = models.TextField()
     city = models.ForeignKey(City,on_delete=models.CASCADE)
     type = models.CharField(max_length=100,choices=choices)
-    image = models.ImageField(upload_to='places_images/')
+    image =CloudinaryField('image', default='places_images/')
 
     def __str__(self):
         return self.name
+
+
+
+
+
+
+
+# from packages.models import PackagePlace  # Replace with your model
+
+# for obj in PackagePlace.objects.all():
+#     print(obj.image.url)  # This should print Cloudinary URLs
+
+
+
+
+
+
+# import os
+# from django.core.files import File
+# from cloudinary.uploader import upload
+# from packages.models import PackagePlace  # Change to your actual model
+
+
+# for obj in PackagePlace.objects.all():
+#     if obj.image:  # If an image exists
+#         local_path = obj.image.path  # Get local file path
+
+#         # Upload image to Cloudinary
+#         result = upload(local_path)
+#         cloudinary_url = result["url"]
+
+#         # Update the model instance with the new Cloudinary URL
+#         obj.image = cloudinary_url
+#         obj.save()
+
+#         # Optional: Delete local file after upload
+#         os.remove(local_path)
+
+# print("Migration complete! All images are now on Cloudinary.")

@@ -1,5 +1,6 @@
 from django.db import models
-from user.models import CustomUser
+from django.contrib.auth import get_user_model
+User=get_user_model()
 # Create your models here.
 
 class Experience(models.Model):
@@ -12,4 +13,4 @@ class Experience(models.Model):
         ('Desert_Attraction','Desert_Attraction')
                ]
     category = models.CharField(max_length=50,choices=choices)
-    user = models.ManyToManyField(CustomUser,related_name='user_experiences')
+    user = models.ManyToManyField(User,related_name='user_experiences')
