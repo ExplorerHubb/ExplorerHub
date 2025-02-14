@@ -11,7 +11,7 @@ class City(models.Model):
     name = models.CharField(max_length=100)
     funfact = models.TextField()
     type = models.CharField(max_length=100,choices=choices)
-    image = CloudinaryField('image',default='')
+    image = CloudinaryField('image',default='http://res.cloudinary.com/djibubqdg/image/upload/v1739547762/g2kxssiifzsqbac9tar3.jpg')
     
     class Meta:
         ordering = ['name']

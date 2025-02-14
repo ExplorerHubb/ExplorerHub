@@ -8,10 +8,15 @@ from cloudinary.models import CloudinaryField
 class CustomUser(AbstractUser):
     choices = [('Female','Female'),('Male','Male')]
     email = models.EmailField(unique=True,null=False,blank=False)
-    gender = models.CharField(max_length = 20,choices=choices,null=True,blank=True)
+    gender = models.CharField(max_length = 20,choices=choices)
     image = CloudinaryField('image', default='http://res.cloudinary.com/djibubqdg/image/upload/v1739547762/g2kxssiifzsqbac9tar3.jpg',null=True,blank=True)
-    phone_no = models.CharField(max_length=15,unique=True,null=True,blank=True)
-    country = models.CharField(max_length=100,null=True,blank=True)
+    phone_no = models.CharField(max_length=15,unique=True)
+    country = models.CharField(max_length=100)
+    first_name = models.CharField(max_length=150,null=False)
+    last_name = models.CharField(max_length=150,null=False)
+    
+
+    
     
 
 # # with connection.cursor() as cursor:

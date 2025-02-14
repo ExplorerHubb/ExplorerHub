@@ -9,8 +9,8 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['id','username','email','password']
-
+        fields = ['id','username','email','password','gender','phone_no','country','first_name','last_name']
+        
 ## override the function create in order to make the password hashed
     def create(self,validated_data):
         user = User.objects.create_user(**validated_data)
