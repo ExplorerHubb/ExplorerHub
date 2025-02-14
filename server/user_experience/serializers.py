@@ -35,3 +35,4 @@ class PackagePlaceSerializer(serializers.ModelSerializer):
     class Meta:
         model = PackagePlace
         fields = '__all__'
+

@@ -18,10 +18,15 @@ class RegisterSerializer(serializers.ModelSerializer):
     
 
 class LoginSerializer(serializers.Serializer):
-    username = serializers.CharField(max_length=150,required=False,allow_blank=True)
-    password = serializers.CharField(write_only=True)
-    email = serializers.EmailField(required=False,allow_blank=True)
+    username = serializers.CharField(max_length = 150,required=False)
+    email = serializers.EmailField(required=False)
+    password = serializers.CharField(max_length = 100)
+    gender = serializers.CharField(max_length = 20,required = False,allow_null=True)
+    image = serializers.ImageField(required = False,allow_null=True)
+    phone_no = serializers.CharField(max_length=15,required = False,allow_null=True)
+    country = serializers.CharField(max_length=100,required = False,allow_null=True)
 
+    
     def validate(self,data):
         
         username = data.get('username', '').strip()
@@ -52,17 +57,26 @@ class LogoutSerializer(serializers.Serializer):
 class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id','username','email']
-
+        fields = ['id','username','email','phone_no','gender','country','image','first_name','last_name'] ##
+        
 class AccountUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['username','email','password']
+        fields = ['username','email','phone_no','gender','country','image','first_name','last_name']
+        extra_kwargs = {
+            'username': {'required': False},
+            'email': {'required': False},
+            'phone_no': {'required': False},  
+            'gender': {'required': False},
+            'country': {'required': False},
+            'image': {'required': False},
+            'first_name': {'required': False},
+            'last_name': {'required': False}
+        }
     def update(self,instance,validated_data):
         
         if 'password' in validated_data:
             instance.set_password(validated_data['password'])
-            validated_data.pop('password')  # Remove from validated_data since it's already set
+            validated_data.pop('password')  
         
-        # Update the rest of the fields
         return super().update(instance,validated_data)

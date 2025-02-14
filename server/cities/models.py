@@ -1,5 +1,5 @@
 from django.db import models
-
+from cloudinary.models import CloudinaryField
 # Create your models here.
 
 
@@ -11,6 +11,7 @@ class City(models.Model):
     name = models.CharField(max_length=100)
     funfact = models.TextField()
     type = models.CharField(max_length=100,choices=choices)
+    image = CloudinaryField('image',default='')
     
     class Meta:
         ordering = ['name']

@@ -27,7 +27,7 @@ class LoginView(APIView):
         username = serializer.validated_data.get('username', '').strip()
         email = serializer.validated_data.get('email', '').strip()
         password = serializer.validated_data.get('password')
-
+        
         user = None
 
         

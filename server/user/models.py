@@ -9,7 +9,7 @@ class CustomUser(AbstractUser):
     choices = [('Female','Female'),('Male','Male')]
     email = models.EmailField(unique=True,null=False,blank=False)
     gender = models.CharField(max_length = 20,choices=choices,null=True,blank=True)
-    image = CloudinaryField('image', default='user_images/',null=True,blank=True)
+    image = CloudinaryField('image', default='http://res.cloudinary.com/djibubqdg/image/upload/v1739547762/g2kxssiifzsqbac9tar3.jpg',null=True,blank=True)
     phone_no = models.CharField(max_length=15,unique=True,null=True,blank=True)
     country = models.CharField(max_length=100,null=True,blank=True)
     

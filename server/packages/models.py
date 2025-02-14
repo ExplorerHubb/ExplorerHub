@@ -28,8 +28,10 @@ class PackagePlace(models.Model):
 
 
 # from packages.models import PackagePlace  # Replace with your model
+# from django.contrib.auth import get_user_model
+# user=get_user_model()
 
-# for obj in PackagePlace.objects.all():
+# for obj in user.objects.all():
 #     print(obj.image.url)  # This should print Cloudinary URLs
 
 
