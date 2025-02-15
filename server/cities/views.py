@@ -10,7 +10,7 @@ from rest_framework.viewsets import ReadOnlyModelViewSet
 
 class CityNamesView(ReadOnlyModelViewSet):
     permission_classes = [AllowAny]
-    queryset = City.objects.all()
+    queryset = City.objects.all().order_by('id')[:27]
     serializer_class = CitynamesSerializer
 
 
