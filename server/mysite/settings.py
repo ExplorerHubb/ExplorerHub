@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'user_experience',
     "cloudinary",
     "cloudinary_storage",
+    "blog",
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (

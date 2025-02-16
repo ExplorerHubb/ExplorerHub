@@ -25,6 +25,7 @@ urlpatterns = [
     path('home/',include('cities.urls')),
     path('',include('packages.urls')),
     path('',include('user_experience.urls')),
+    path('Blogs/',include('blog.urls')),
 
 ]
 if settings.DEBUG:
