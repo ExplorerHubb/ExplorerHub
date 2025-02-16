@@ -5,15 +5,12 @@ import bg from '../../assets/fall2.jpg'
 
 const Footer = () => {
   return (
-
-    // put background image for footer
     <div className="bg-cover bg-center  text-gray-700 flex flex-col 
-    items-center gap-5 py-10 px-8 md:px-[8vw] mt-20" id="footer" 
-    //  style={{backgroundImage: `url(${bg})`}}
+    items-center gap-5 py-7 px-8 md:px-[8vw] mt-10" id="footer" 
      >   
-        <div className="w-full gap-20 flex flex-col sm:flex-row justify-between">
+        <div className="w-full gap-20  flex flex-col sm:flex-row justify-between">
             <div className="flex flex-col items-start gap-5">
-                <img src={logo} alt='logo' className='h-11 w-30 sm:h-14 sm:w-60' />   
+                <img src={logo} alt='logo' className='h-20 w-32 sm:h-24 sm:w-36' />   
                 <p>Our mission is to transform the way people eat. It's ambitious, but so are we. And we need people like you to help us do it.</p>
                 <div className="flex gap-4 text-xl">
                     <BsFacebook className='cursor-pointer text-blue-800'/>
@@ -24,7 +21,7 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col items-start gap-5">
-                <h2 className="text-secondary font-semibold">COMPANY</h2>
+                <h2 className="text-primary font-semibold">COMPANY</h2>
                 <ul className="space-y-2">
                     <li className="cursor-pointer">Home</li>
                     <li className="cursor-pointer">About Us</li>
@@ -33,7 +30,7 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col items-start gap-5">
-                <h2 className="text-secondary font-semibold">CONTACT</h2>
+                <h2 className="text-primary font-semibold">CONTACT</h2>
                 <ul className="space-y-2">
                     <li>1234 Street Name, City Name, United States</li>
                     <li>+1-234-567-1989</li>
@@ -41,8 +38,8 @@ const Footer = () => {
                 </ul>
             </div>
         </div>
-        <hr className="w-full border-secondary my-5" />
-        <p className="text-center text-xs sm:text-sm">Copyright 2025 ExplorerHub - All rights reserved</p>
+        <hr className="w-full border-primary my-1" />
+        <p className="text-center  text-xs sm:text-sm">Copyright 2025 ExplorerHub - All rights reserved</p>
     </div>
   );
 };

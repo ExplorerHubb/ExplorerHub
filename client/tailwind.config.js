@@ -8,8 +8,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#FAEDCD",
-        secondary: '#5C4033',
+        // using blue as a primary color
+        primary: '#407BFF',
       },
       container: {
         center: true,

@@ -35,9 +35,8 @@ const login = ({ onAuthSuccess }) => {
             });
 
         
-
             const data = await response.json();
-
+            console.log(data);
             if (response.ok) {
                 localStorage.setItem('token', data.token);
                 onAuthSuccess(data.token);
@@ -76,7 +75,7 @@ const login = ({ onAuthSuccess }) => {
                     value={formData.email}
                     onChange={handleChange}
                     className={`p-2 border rounded-xl bg-gray-100 focus:ring-2
-                        focus:ring-[#1b5709] outline-none w-full mt-3
+                        focus:ring-primary outline-none w-full mt-3
                         ${errors.email ? "border-red-600" : ""}`}
                 />
                 {errors.email && <p className="text-red-600 text-sm self-start">{errors.email}</p>}
@@ -96,20 +95,20 @@ const login = ({ onAuthSuccess }) => {
                 
                 {/* forget password */}
                 <p className="text-sm text-black mt-5">
-                    Forgot Password? <span className="text-[#1b5709] cursor-pointer">Forget</span>
+                    Forgot Password? <span className="text-primary cursor-pointer">Forget</span>
                 </p>
 
                 {/* register */}
                 <p className="text-sm text-black mt-2">
                     Don't have an account?
-                    <span className="text-[#1b5709] cursor-pointer"
+                    <span className="text-primary cursor-pointer"
                     onClick={() => navigate('/register')}>
                     Register</span>
                 </p>
 
                 <button
                 type="submit"
-                className="bg-[#1b5709] text-white p-2 rounded-xl font-bold w-1/3
+                className="bg-primary text-white p-2 rounded-xl font-bold w-1/3
                 transition transform hover:scale-95 ease-in duration-300 mt-5"
                 >
                 Log In
