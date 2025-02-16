@@ -20,11 +20,11 @@ class CreateBlog(ModelViewSet):
 
     #it is used in creating new instances
     def perform_create(self, serializer):
-        return serializer.save(user=self.request.user)
+        return serializer.save(author=self.request.user)
     
     #it is used when updating  existing ones
     def perform_update(self, serializer):
-        return serializer.save(user=self.request.user)
+        return serializer.save(author=self.request.user)
     
     def destroy(self, request, *args, **kwargs):
         blog_id = kwargs.get('id')
@@ -36,9 +36,9 @@ class CreateBlog(ModelViewSet):
         
     
 class CommentView(ModelViewSet):
-    queryset = Comment
+    queryset = Comment.objects.all()
     serializer_class = CommentSerializer
-    lookup_field = "comment_id"
+    lookup_field = "id"
 
     def perform_create(self, serializer):
         return serializer.save(author=self.request.user)
@@ -47,9 +47,9 @@ class CommentView(ModelViewSet):
         return serializer.save(author = self.request.user)
     
     def destroy(self, request, *args, **kwargs):
-        comment_id = kwargs.get("comment_id") #lookupfield
+        comment_id = kwargs.get('id') #lookupfield
         blog_id = request.data.get("blog")
-        comment = get_object_or_404(User,id=comment_id,blog = blog_id)
+        comment = get_object_or_404(Comment,id=comment_id,blog = blog_id)
         return super().destroy(comment)
     
 class BlogCommentsView(APIView):

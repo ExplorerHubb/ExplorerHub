@@ -5,11 +5,10 @@ from cities.models import City
 
 class BlogSerializer(serializers.ModelSerializer):
     city = serializers.PrimaryKeyRelatedField(queryset=City.objects.all())  # Use ID instead of string
-
-
     class Meta:
         model = Blog
-        fields = ['name','city','description','author']
+        fields ='__all__'
+        extra_kwargs = {'author':{'read_only':True}}
 
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
