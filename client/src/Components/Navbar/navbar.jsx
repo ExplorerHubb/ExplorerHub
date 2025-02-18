@@ -12,7 +12,7 @@ const navbar = ({isAuthenticated , onLogout}) => {
         <div className='container flex justify-between items-center'>
         {/* logo */}
             <div>
-                <img src={logo} alt='logo' className='h-11 w-30 sm:h-14 sm:w-full' />   
+                <img src={logo} alt='logo' className='h-16 w-full sm:h-16 sm:w-full' />   
             </div>
 
             {/* nav links */}
