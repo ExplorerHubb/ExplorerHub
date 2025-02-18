@@ -31,7 +31,8 @@ class CreateBlog(ModelViewSet):
         blog = get_object_or_404(Blog,id=blog_id)
         if blog.author == request.user:
             return super().destroy(blog)
-        return Response({"Error":"you dont have access to delete tbis post"},status=status.HTTP_401_UNAUTHORIZED)
+        return Response({"message":"the post was deleted successfully"},status=status.HTTP_200_OK)
+        return Response({"Error":"you dont have access to delete this post"},status=status.HTTP_401_UNAUTHORIZED)
         
         
     

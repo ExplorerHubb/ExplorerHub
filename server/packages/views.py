@@ -22,9 +22,9 @@ class ReligonPlacesView(ModelViewSet):
     serializer_class = PlacesSerializer
 
 class ModernPlacesView(ModelViewSet):
-    queryset = PackagePlace.objects.filter(type ='Modern_Attraction')
+    queryset = PackagePlace.objects.filter(type ='Modern_Attracation')
     serializer_class = PlacesSerializer
 
 class DessertPlacesView(ModelViewSet):
-    queryset = PackagePlace.objects.filter(type ='Dessert_Attraction')
+    queryset = PackagePlace.objects.filter(type ='Desert_Attraction')
     serializer_class = PlacesSerializer

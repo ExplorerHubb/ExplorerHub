@@ -20,7 +20,7 @@ class EntertainmentSerializer(serializers.ModelSerializer):
 class ShoppingSerializer(serializers.ModelSerializer):
     class Meta:
         model = ShoppingMallsPlace
-        fields = ['name','country_code','city','district','suburb','street','formatted','categories','house_number','website','opening_hours','contact','facilities','catering','phone','email']  
+        fields = ['name','country_code','city','district','suburb','street','formatted','categories','house_number','website','opening_hours','contact','facilities','phone','email']  
 
 class CitynamesSerializer(serializers.ModelSerializer):
     class Meta:
