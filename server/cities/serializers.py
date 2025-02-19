@@ -25,7 +25,7 @@ class ShoppingSerializer(serializers.ModelSerializer):
 class CitynamesSerializer(serializers.ModelSerializer):
     class Meta:
         model = City
-        fields = ['name','type']
+        fields = ['name','type','image']
 
 
 

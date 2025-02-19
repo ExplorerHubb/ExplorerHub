@@ -26,6 +26,7 @@ urlpatterns = [
     path('',include('packages.urls')),
     path('',include('user_experience.urls')),
     path('Blogs/',include('blog.urls')),
+    path('accounts/',include('allauth.urls'))
 
 ]
 if settings.DEBUG:
