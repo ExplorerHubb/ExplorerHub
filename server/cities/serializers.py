@@ -23,10 +23,15 @@ class ShoppingSerializer(serializers.ModelSerializer):
         fields = ['name','country_code','city','district','suburb','street','formatted','categories','house_number','website','opening_hours','contact','facilities','phone','email']  
 
 class CitynamesSerializer(serializers.ModelSerializer):
+    image_url = serializers.SerializerMethodField()
     class Meta:
         model = City
-        fields = ['name','type','image']
+        fields = ['name','type','image_url']
 
+    def get_image_url(self,obj):
+        if obj.image:
+            return obj.image.url
+        return None
 
 
 

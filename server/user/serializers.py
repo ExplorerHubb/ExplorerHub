@@ -55,10 +55,15 @@ class LogoutSerializer(serializers.Serializer):
             pass
 
 class AccountSerializer(serializers.ModelSerializer):
+    image_url = serializers.SerializerMethodField()
     class Meta:
         model = User
-        fields = ['id','username','email','phone_no','gender','country','image','first_name','last_name'] ##
-        
+        fields = ['id','username','email','phone_no','gender','country','first_name','last_name','image_url'] ##
+    
+    def get_image_url(self,obj):
+        if obj.image:
+            return obj.image.url
+        return None
 class AccountUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
