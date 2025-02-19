@@ -4,12 +4,13 @@ import Header from '../../Components/Header/header.jsx'
 import Footer from '../../Components/Footer/footer.jsx'
 import About from '../../Components/About/about.jsx'
 import Cities from '../../Components/Cities/cities.jsx'
+import Categories from '../../Components/Categories/categories.jsx'
 import videoBG from '../../assets/Egypt.mp4'
 
 const home = ({isAuthenticated, onLogout }) => {
 
   return (
-<div className="relative w-full h-screen">
+    <div className="relative w-full h-screen">
       
       <video
         autoPlay
@@ -20,13 +21,13 @@ const home = ({isAuthenticated, onLogout }) => {
         <source src={videoBG} type="video/mp4" />
       </video>
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
-
       <div className="relative z-10">
         <Navbar isAuthenticated={isAuthenticated} onLogout={onLogout} />
         <Header />
       </div>
 
       <Cities />
+      <Categories />
       <About />
       <Footer />
     </div>

@@ -46,29 +46,39 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, handleLogout }) => {
 
 const ProfileContent = ({ user, profilePicture, handleProfilePictureChange }) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-lg mx-auto">
+    <div className="bg-white p-6 rounded-xl border w-full max-w-lg mx-auto">
       <h2 className="text-2xl font-bold mb-4">Profile</h2>
       <div className="flex flex-col items-center mb-6">
         <div className="relative">
-          <img src={profilePicture || profilepic} alt="Profile" className="w-32 h-32 rounded-full" />
-          <input type="file" className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" onChange={handleProfilePictureChange} />
+          <img
+            src={user?.image_url || profilePicture || profilepic}
+            alt="Profile"
+            className="w-44 h-52 rounded-lg object-cover"
+          />
+          <input
+            type="file"
+            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+            onChange={handleProfilePictureChange}
+          />
         </div>
         <h3 className="text-xl font-semibold mt-2">{user?.first_name} {user?.last_name}</h3>
       </div>
-      <div className="grid grid-cols-2 gap-4 px-4">
-        {[
-          { label: "Name", value: user?.first_name },
-          { label: "Gender", value: user?.gender },
-          { label: "Country", value: user?.country },
-          { label: "Number", value: user?.phone_no },
-          { label: "Email", value: user?.email },
-          { label: "Username", value: user?.username }
-        ].map((item, index) => (
-          <div key={index} className="flex items-center space-x-2">
-            <span className="font-semibold">{item.label}:</span>
-            <span>{item.value || "Not available"}</span>
-          </div>
-        ))}
+      <div className="px-4 flex justify-center mb-4">
+        <div className="grid grid-cols-2 gap-4 gap-x-28 ">
+          {[
+            { label: "Username", value: user?.username },
+            { label: "Email", value: user?.email },
+            { label: "Name", value: `${user?.first_name} ${user?.last_name}` },
+            { label: "Gender", value: user?.gender },
+            { label: "Country", value: user?.country },
+            { label: "Phone Number", value: user?.phone_no }
+          ].map((item, index) => (
+            <div key={index} className="flex flex-col">
+              <span className="font-semibold text-black">{item.label}</span>
+              <span className="text-gray-500">{item.value || "Not available"}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -85,21 +95,25 @@ const profile = () => {
     const fetchUser = async () => {
       try {
         const token = localStorage.getItem("token");
-        if (!token) return navigate("/login");
-
-        const response = await axios.get("https://seba2.pythonanywhere.com/user/6", {
-          headers: { Authorization: `Token  ${token}` },
+        const userId = localStorage.getItem("user_id");
+  
+        if (!token || !userId) return navigate("/login");
+  
+        const response = await axios.get(`https://seba2.pythonanywhere.com/user/${userId}`, {
+          headers: { Authorization: `Token ${token}` },
         });
-
+  
         console.log("User data:", response.data); // Debugging
         setUser(response.data);
       } catch (error) {
         console.error("Error fetching user:", error.response?.data || error.message);
       }
     };
-
+  
     fetchUser();
   }, [navigate]);
+  
+  
 
   const handleLogout = () => {
     localStorage.removeItem("token");

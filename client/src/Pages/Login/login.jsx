@@ -33,13 +33,14 @@ const login = ({ onAuthSuccess }) => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
             });
-
         
             const data = await response.json();
-            console.log(data);
+            console.log("API response:", data);
             if (response.ok) {
-                localStorage.setItem('token', data.token);
-                onAuthSuccess(data.token);
+                localStorage.setItem('token', data.access);
+                localStorage.setItem("user_id", data.user.id);
+                console.log("User ID Saved:", localStorage.getItem("user_id"));
+                onAuthSuccess(data.access);
                 navigate('/profile');
             } else {
                 setServerError(data.message);
