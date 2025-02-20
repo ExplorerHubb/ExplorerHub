@@ -57,28 +57,30 @@ class AccommodationView(APIView):
 
 
 class CateringCategoriesView(APIView):
-    def get(self,request,type,city_id):
+    def get(self,request,type,city):
         categories = ['catering','restaurant','bar','cafe','fast_food','building.catering']
         if type not in categories:
             return Response({'error':'cannot find this type of category'},status=status.HTTP_400_BAD_REQUEST)
         if type == 'catering':
-            data = CateringPlace.objects.filter(id=city_id)
+            data = CateringPlace.objects.filter(name=city)
         else:
-            data = CateringPlace.objects.filter(city=city_id,categories__contains=type)
+            cityy = get_object_or_404(City,name=city)
+            data = CateringPlace.objects.filter(city=cityy,categories__contains=type)
         
         serializer = CateringSerializer(data,many=True)
         
         return Response(serializer.data,status=status.HTTP_200_OK)
 
 class AccomodationCategoriesView(APIView):
-    def get(self,request,type,city_id):
+    def get(self,request,type,city):
         categories = ['accommodation','hotel','hostel','apartment','motel','guest_house','hut']
         if type not in categories:
             return Response({'error':'cannot find this type of category'},status=status.HTTP_400_BAD_REQUEST)
         if type == 'accommodation':
-            data = Accommodation.objects.filter(id=city_id)
+            data = Accommodation.objects.filter(name=city)
         else:
-            data = Accommodation.objects.filter(city=city_id,categories__contains=type)
+            cityy = get_object_or_404(City,name=city)
+            data = Accommodation.objects.filter(city=cityy,categories__contains=type)
         
         serializer = AccommodationSerializer(data,many=True)
         
@@ -86,15 +88,16 @@ class AccomodationCategoriesView(APIView):
 
 
 class EntertainmentCategoriesView(APIView):
-    def get(self,request,type,city_id):
+    def get(self,request,type,city):
         categories = ['entertainment','museum','building','cinema','culture','tourism','theatre','zoo','building.historic','theme_park','golf','arts_centre']
         if type not in categories:
             return Response({'error':'cannot find this type of category'},status=status.HTTP_400_BAD_REQUEST)
         
         if type == 'entertainment':
-            data = EntertainmentPlace.objects.filter(id=city_id)
+            data = EntertainmentPlace.objects.filter(name=city)
         else:
-            data = EntertainmentPlace.objects.filter(city=city_id,categories__contains=type)
+            cityy = get_object_or_404(City,name=city)
+            data = EntertainmentPlace.objects.filter(city=cityy,categories__contains=type)
         
         serializer = EntertainmentSerializer(data,many=True)
        
