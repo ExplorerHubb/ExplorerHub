@@ -4,6 +4,9 @@ import Home from './Pages/Home/home.jsx'
 import Login from './Pages/Login/login.jsx'
 import Register from './Pages/Register/register.jsx'
 import Profile from './Pages/Profile/Profile.jsx'
+import InfoCity from './Pages/InfoCity/infoCity.jsx'
+import Category from './Pages/Category/category.jsx'
+import UpdateProfile from './Pages/UpdateProfile/updateProfile.jsx'
 
 function App() {
 
@@ -28,6 +31,9 @@ function App() {
           <Route path="/login" element={<Login onAuthSuccess={handleAuthSuccess} />} />
           <Route path="/register" element={<Register onAuthSuccess={handleAuthSuccess} />} />
           <Route path="/profile" element={isAuthenticated ? <Profile /> : <Login onAuthSuccess={handleAuthSuccess} />} />
+          <Route path="/city/:cityName" element={<InfoCity />} />
+          <Route path="/category/:categoryName" element={<Category />} />
+          <Route path="/update-profile" element={isAuthenticated ? <UpdateProfile /> : <Login onAuthSuccess={handleAuthSuccess}/>} />
         </Routes>
       </div>
     </Router>

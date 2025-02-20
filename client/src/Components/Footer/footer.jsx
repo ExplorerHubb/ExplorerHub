@@ -1,7 +1,6 @@
 import React from 'react';
 import { BsFacebook, BsInstagram, BsTwitterX , BsWhatsapp} from "react-icons/bs";
 import logo from '../../assets/logo.png'
-import bg from '../../assets/fall2.jpg'
 
 const Footer = () => {
   return (
