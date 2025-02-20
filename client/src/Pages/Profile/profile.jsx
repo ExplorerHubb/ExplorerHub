@@ -1,48 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { FiMenu, FiX } from "react-icons/fi";
-import logo from '../../assets/logo.png';
-import { IoIosLogOut } from "react-icons/io";
-import { MdSecurityUpdateGood } from "react-icons/md";
-import { MdOutlineFavoriteBorder } from "react-icons/md";
+import { FiMenu } from "react-icons/fi";
+import Sidebar from "../../Components/Sidebar/Sidebar.jsx";
 import profilepic from "../../assets/profile.png";
-
-const Sidebar = ({ sidebarOpen, setSidebarOpen, handleLogout }) => {
-  return (
-    <div
-      className={`bg-white text-black w-64 p-5 fixed h-full transition-transform 
-        ${sidebarOpen ? "translate-x-0 z-50" : "-translate-x-64"} lg:translate-x-0 lg:z-auto`}
-    >
-      <button className="lg:hidden mb-4 text-black" onClick={() => setSidebarOpen(false)}>
-        <FiX size={20} />
-      </button>
-      <h2 className="text-2xl font-bold text-black">Dashboard</h2>
-      <ul className="mt-6 space-y-4">
-        <li>
-          <Link to="/">
-            <img src={logo} alt="Logo" className="h-11 w-30 sm:h-14 cursor-pointer" />
-          </Link>
-        </li>
-        <li>
-          <Link to="/profile" className="flex items-center gap-2 p-2 text-black">
-            <MdOutlineFavoriteBorder size={20} /> Favourites
-          </Link>
-        </li>
-        <li>
-          <Link to="/profile" className="flex items-center gap-2 p-2 text-black">
-            <MdSecurityUpdateGood size={20} /> Update Profile
-          </Link>
-        </li>
-        <li>
-          <button onClick={handleLogout} className="flex items-center gap-2 p-2 text-black">
-            <IoIosLogOut size={20} /> Logout
-          </button>
-        </li>
-      </ul>
-    </div>
-  );
-};
 
 const ProfileContent = ({ user, profilePicture, handleProfilePictureChange }) => {
   return (
@@ -84,7 +45,6 @@ const ProfileContent = ({ user, profilePicture, handleProfilePictureChange }) =>
   );
 };
 
-
 const profile = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [user, setUser] = useState(null);
@@ -113,8 +73,6 @@ const profile = () => {
     fetchUser();
   }, [navigate]);
   
-  
-
   const handleLogout = () => {
     localStorage.removeItem("token");
     navigate("/login");
@@ -130,24 +88,6 @@ const profile = () => {
       reader.readAsDataURL(file);
     }
   };
-
-  const handleSaveChanges = async () => {
-    try {
-      const token = localStorage.getItem("token");
-      if (!token) return navigate("/login");
-  
-      const response = await axios.put(
-        `https://seba2.pythonanywhere.com/update_user/${user.id}`,
-        { profilePicture },
-        { headers: { Authorization: `Token ${token}` } }
-      );
-      setUser(response.data); 
-      setProfilePicture(response.data.profilePicture);
-    } catch (error) {
-      console.error("Error updating user:", error);
-    }
-  };
-  
 
   return (
     <div className="flex h-screen bg-gray-100">

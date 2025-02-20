@@ -69,8 +69,8 @@ const Navbar = ({ isAuthenticated, onLogout }) => {
             <>
               <Link to='/profile'><CgProfile className='w-[20px] h-[20px] text-white transition 
               transform hover:scale-110 ease-out duration-300' /></Link>
-              <button onClick={onLogout} className='px-3 py-1 bg-primary text-white rounded-xl'>
-                Logout</button>
+              <button onClick={onLogout} className='px-3 py-1 bg-primary text-white rounded-xl
+               transition transform hover:scale-105 ease-out duration-300'>Logout</button>
             </>
           ) : (
             <Link to='/login'><CgProfile className='w-[20px] h-[20px] text-white transition
@@ -113,8 +113,8 @@ const Navbar = ({ isAuthenticated, onLogout }) => {
               transform hover:scale-110 ease-out duration-300'>
                 <CgProfile className='text-2xl w-[20px] h-[20px]' /><span>Profile</span>
               </Link>
-              <button onClick={onLogout} className='mt-4 px-3 py-1 bg-primary text-white rounded-xl'>
-                Logout</button>
+              <button onClick={onLogout} className='mt-4 px-3 py-1 bg-primary text-white rounded-xl
+              transition transform hover:scale-105 ease-out duration-300'>Logout</button>
             </>
           ) : (
             <Link to='/login' className='flex items-center space-x-2  text-white transition 
