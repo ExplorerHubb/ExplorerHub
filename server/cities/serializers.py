@@ -30,7 +30,7 @@ class ShoppingSerializer(serializers.ModelSerializer):
     image_url = serializers.SerializerMethodField()
     class Meta:
         model = ShoppingMallsPlace
-        fields = ['name','country_code','city','district','suburb','street','formatted','categories','house_number','website','opening_hours','contact','facilities','phone','email']  
+        fields = ['name','country_code','city','district','suburb','street','formatted','categories','house_number','website','opening_hours','contact','facilities','phone','email','image_url']  
     def get_image_url(self,obj):
         if obj.image:
             return obj.image.url
@@ -84,7 +84,7 @@ class AccommodationSerializer(serializers.ModelSerializer):
     image_url = serializers.SerializerMethodField()
     class Meta:
         model = Accommodation
-        fields = ['name','country_code','city','district','suburb','street','formatted','categories','house_number','website','opening_hours','contact','facilities','phone','email']
+        fields = ['name','country_code','city','district','suburb','street','formatted','categories','house_number','website','opening_hours','contact','facilities','phone','email','image_url']
     def get_image_url(self,obj):
         if obj.image:
             return obj.image.url
