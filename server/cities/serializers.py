@@ -7,20 +7,34 @@ class FamousFoodSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'description']
 
 class CateringSerializer(serializers.ModelSerializer):
+    image_url = serializers.SerializerMethodField()
     class Meta:
         model = CateringPlace
-        fields = ['name','country_code','city','district','suburb','street','formatted','categories','house_number','website','opening_hours','contact','facilities','catering','phone','email']
+        fields = ['name','country_code','city','district','suburb','street','formatted','categories','house_number','website','opening_hours','contact','facilities','catering','phone','email','image_url']
 
+    def get_image_url(self,obj):
+        if obj.image:
+            return obj.image.url
+        return None
 class EntertainmentSerializer(serializers.ModelSerializer):
+    image_url = serializers.SerializerMethodField()
     class Meta:
         model =  EntertainmentPlace
-        fields = ['name','country_code','city','district','suburb','street','formatted','categories','house_number','website','opening_hours','contact','facilities','catering','phone','email']  
-
+        fields = ['name','country_code','image_url','city','district','suburb','street','formatted','categories','house_number','website','opening_hours','contact','facilities','catering','phone','email']  
+    def get_image_url(self,obj):
+        if obj.image:
+            return obj.image.url
+        return None
 
 class ShoppingSerializer(serializers.ModelSerializer):
+    image_url = serializers.SerializerMethodField()
     class Meta:
         model = ShoppingMallsPlace
         fields = ['name','country_code','city','district','suburb','street','formatted','categories','house_number','website','opening_hours','contact','facilities','phone','email']  
+    def get_image_url(self,obj):
+        if obj.image:
+            return obj.image.url
+        return None
 
 class CitynamesSerializer(serializers.ModelSerializer):
     image_url = serializers.SerializerMethodField()
@@ -50,6 +64,7 @@ class CityCateringSerializer(serializers.ModelSerializer):
         model = City
         fields = ['city_place']
 
+
 class CityEntertainmentSerializer(serializers.ModelSerializer):
     entertainment_place = EntertainmentSerializer(many=True,read_only=True)
     class Meta:
@@ -66,11 +81,19 @@ class CityShoppingSerializer(serializers.ModelSerializer):
 # shopping serialaizers
 
 class AccommodationSerializer(serializers.ModelSerializer):
+    image_url = serializers.SerializerMethodField()
     class Meta:
         model = Accommodation
         fields = ['name','country_code','city','district','suburb','street','formatted','categories','house_number','website','opening_hours','contact','facilities','phone','email']
+    def get_image_url(self,obj):
+        if obj.image:
+            return obj.image.url
+        return None
+
+
 class CityAccommodationSerializer(serializers.ModelSerializer):
     accommodation = AccommodationSerializer(many=True,read_only=True)
     class Meta:
         model = City
         fields = ['accommodation']
+

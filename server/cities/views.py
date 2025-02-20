@@ -1,11 +1,13 @@
 from django.shortcuts import render,get_object_or_404
-from .models import City
+from .models import City,CateringPlace,Accommodation,EntertainmentPlace
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
 from .serializers import CitySerializer,FamousFoodSerializer,CityCateringSerializer,CityEntertainmentSerializer,CityShoppingSerializer,CityAccommodationSerializer,CitynamesSerializer
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.viewsets import ReadOnlyModelViewSet
+from .serializers import CateringSerializer,AccommodationSerializer,EntertainmentSerializer
+
 # Create your views here.
 
 class CityNamesView(ReadOnlyModelViewSet):
@@ -22,7 +24,11 @@ class CityView(APIView):
         city_data = CitySerializer(city)
         
         return Response(city_data.data, status=status.HTTP_200_OK)
-    
+
+
+
+
+
 class CityCateringView(APIView):
     permission_classes = [AllowAny]
     def get(self,request,name):
@@ -48,3 +54,48 @@ class AccommodationView(APIView):
         city = get_object_or_404(City,name=name)
         city_data = CityAccommodationSerializer(city)
         return Response(city_data.data,status=status.HTTP_200_OK)
+
+
+class CateringCategoriesView(APIView):
+    def get(self,request,type,city_id):
+        categories = ['catering','restaurant','bar','cafe','fast_food','building.catering']
+        if type not in categories:
+            return Response({'error':'cannot find this type of category'},status=status.HTTP_400_BAD_REQUEST)
+        if type == 'catering':
+            data = CateringPlace.objects.filter(id=city_id)
+        else:
+            data = CateringPlace.objects.filter(city=city_id,categories__contains=type)
+        
+        serializer = CateringSerializer(data,many=True)
+        
+        return Response(serializer.data,status=status.HTTP_200_OK)
+
+class AccomodationCategoriesView(APIView):
+    def get(self,request,type,city_id):
+        categories = ['accommodation','hotel','hostel','apartment','motel','guest_house','hut']
+        if type not in categories:
+            return Response({'error':'cannot find this type of category'},status=status.HTTP_400_BAD_REQUEST)
+        if type == 'accommodation':
+            data = Accommodation.objects.filter(id=city_id)
+        else:
+            data = Accommodation.objects.filter(city=city_id,categories__contains=type)
+        
+        serializer = AccommodationSerializer(data,many=True)
+        
+        return Response(serializer.data,status=status.HTTP_200_OK)
+
+
+class EntertainmentCategoriesView(APIView):
+    def get(self,request,type,city_id):
+        categories = ['entertainment','museum','building','cinema','culture','tourism','theatre','zoo','building.historic','theme_park','golf','arts_centre']
+        if type not in categories:
+            return Response({'error':'cannot find this type of category'},status=status.HTTP_400_BAD_REQUEST)
+        
+        if type == 'entertainment':
+            data = EntertainmentPlace.objects.filter(id=city_id)
+        else:
+            data = EntertainmentPlace.objects.filter(city=city_id,categories__contains=type)
+        
+        serializer = EntertainmentSerializer(data,many=True)
+       
+        return Response(serializer.data,status=status.HTTP_200_OK)

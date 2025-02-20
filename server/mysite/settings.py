@@ -58,7 +58,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    
+    'favorites',
     'allauth.socialaccount.providers.google',
 ]
 REST_FRAMEWORK = {

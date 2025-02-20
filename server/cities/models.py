@@ -32,6 +32,15 @@ class FamousFood(models.Model):
         return self.name
     
 
+CATEGORY_DEFAULT_IMAGES = {
+    'catering': 'https://res.cloudinary.com/djibubqdg/image/upload/v1740060765/xdamt9qiiq8bjlt99zio.jpg',
+    'catering.restaurant': 'https://res.cloudinary.com/djibubqdg/image/upload/v1740060828/oapjqql8kp7njuhxsxag.jpg',
+    'catering.bar':'https://res.cloudinary.com/djibubqdg/image/upload/v1740060663/ayoqnkjihysirxunwcad.jpg',
+    'catering.cafe':'https://res.cloudinary.com/djibubqdg/image/upload/v1740060724/oqmtktr8jxx1va6frxu7.jpg',
+    'catering.fast_food':'https://res.cloudinary.com/djibubqdg/image/upload/v1740060871/nlpmbjjtbknogksmwoca.jpg',
+    'bulding.catering':'https://th.bing.com/th/id/R.a32ef99d3e94728afd5b0fc3048379d1?rik=5tYdTDTwkbrdgQ&pid=ImgRaw&r=0'
+}
+
 class CateringPlace(models.Model):
 
     name = models.CharField(max_length=200,null=True)
@@ -42,6 +51,7 @@ class CateringPlace(models.Model):
     street = models.TextField(null=True,blank=True)
     formatted = models.TextField(null=True,blank=True)
     categories = models.CharField(max_length=100)
+    image = CloudinaryField('image',default = 'catering_places/caf.jpg')
     
     house_number = models.CharField(max_length=1000,null=True,blank=True)
     website = models.URLField(max_length=100,null=True,blank=True)
@@ -52,9 +62,38 @@ class CateringPlace(models.Model):
     phone = models.CharField(max_length=50,null=True,blank=True)
     email = models.EmailField(max_length=200,null=True,blank=True)
 
+
+        
     def __str__(self):
         return self.name
 
+ACCOMMODATION_DEFAULT_IMAGES = {
+    'accommodation': 'https://res.cloudinary.com/djibubqdg/image/upload/v1740063223/zwhfighfqaga6vnqfs3o.jpg',
+    'accommodation.hotel': 'https://res.cloudinary.com/djibubqdg/image/upload/v1740062669/iqkuxcp4t5uchdxycv2f.webp',
+    'accommodation.apartment':'https://res.cloudinary.com/djibubqdg/image/upload/v1740062992/kdosencepaag7uobwe5i.jpg',
+    'accommodation.hostel':'https://res.cloudinary.com/djibubqdg/image/upload/v1740062957/trmt5yfmg8lieciv6l5x.jpg',
+    'accommodation.guest_house':'https://res.cloudinary.com/djibubqdg/image/upload/v1740063049/z3nrgzxtrumexuzk6xuk.png',
+    'accommodation.hut':'https://res.cloudinary.com/djibubqdg/image/upload/v1740063087/vhefin0bvvblau0pknua.jpg',
+    'accommodation.motel':'https://res.cloudinary.com/djibubqdg/image/upload/v1740063132/m4roixqhqssz3ngogsyp.jpg'
+}
+
+
+
+
+
+ENTERTAINMENT_DEFAULT_IMAGES = {
+    'entertainment': 'https://res.cloudinary.com/djibubqdg/image/upload/v1740064787/xid1v4x0savn1qydxckq.jpg',
+    'entertainment.museum': 'https://res.cloudinary.com/djibubqdg/image/upload/v1740064843/tj3zef0lctfteuefnj8m.jpg',
+    'building':'https://res.cloudinary.com/djibubqdg/image/upload/v1740064884/amkzqkeggovj7znwkypn.jpg',
+    'entertainment.cinema':'https://res.cloudinary.com/djibubqdg/image/upload/v1740064928/oxmjvni7vl72polepw9h.jpg',
+    'entertainment.culture':'https://res.cloudinary.com/djibubqdg/image/upload/v1740064964/dagth78zxh82vmi57fde.jpg',
+    'building.tourism':'https://res.cloudinary.com/djibubqdg/image/upload/v1740065016/b71gjxdz0cvkezvzre2p.jpg',
+    'entertainment.culture.theatre':'https://res.cloudinary.com/djibubqdg/image/upload/v1740065055/xenn7cvwxnb95sfwarjl.jpg',
+    'entertainment.zoo':'https://res.cloudinary.com/djibubqdg/image/upload/v1740065132/ytzdi43fw2avtezbdkes.jpg',
+    'building.historic':'https://res.cloudinary.com/djibubqdg/image/upload/v1740065190/a5hwtfibiadpfcfwv3tc.jpg',
+    'entertainment.theme_park':'https://res.cloudinary.com/djibubqdg/image/upload/v1740065245/wjvvjvn2tzmw9qsjtxzb.jpg',
+    'entertainment.miniature_golf':'https://res.cloudinary.com/djibubqdg/image/upload/v1740065342/zj5obyyq6uktacxqjef1.jpg',
+}
 class EntertainmentPlace(models.Model):
     name = models.CharField(max_length=200,null=True)
     country_code = models.CharField(max_length=10)
@@ -64,7 +103,7 @@ class EntertainmentPlace(models.Model):
     street = models.TextField(null=True,blank=True)
     formatted = models.TextField(null=True,blank=True)
     categories = models.CharField(max_length=100)
-    
+    image = CloudinaryField('image',default = 'catering_places/caf.jpg')
     house_number = models.CharField(max_length=1000,null=True,blank=True)
     website = models.URLField(max_length=100,null=True,blank=True)
     opening_hours = models.CharField(max_length=200,null=True,blank=True)
@@ -86,7 +125,7 @@ class ShoppingMallsPlace(models.Model):
     street = models.TextField(null=True,blank=True)
     formatted = models.TextField(null=True,blank=True)
     categories = models.CharField(max_length=100)
-    
+    image = CloudinaryField('image',default = 'catering_places/caf.jpg')
     house_number = models.CharField(max_length=1000,null=True,blank=True)
     website = models.URLField(max_length=100,null=True,blank=True)
     opening_hours = models.CharField(max_length=200,null=True,blank=True)
@@ -109,7 +148,7 @@ class Accommodation(models.Model):
     street = models.TextField(null=True,blank=True)
     formatted = models.TextField(null=True,blank=True)
     categories = models.CharField(max_length=100)
-    
+    image = CloudinaryField('image',default = 'catering_places/caf.jpg')
     house_number = models.CharField(max_length=1000,null=True,blank=True)
     website = models.URLField(max_length=100,null=True,blank=True)
     opening_hours = models.CharField(max_length=200,null=True,blank=True)
@@ -118,5 +157,70 @@ class Accommodation(models.Model):
     phone = models.CharField(max_length=50,null=True,blank=True)
     email = models.EmailField(max_length=200,null=True,blank=True)
 
-    # def __str__(self):
-    #     return self.name
+    def __str__(self):
+        return self.name
+
+
+#     from cities.models import CateringPlace, CATEGORY_DEFAULT_IMAGES
+
+# # Get all records that have no image or the placeholder image
+# places = CateringPlace.objects.filter(image='catering_places/caf.jpg')
+# places = CateringPlace.objects.filter(image='https://th.bing.com/th/id/OIP.1EeuwRUzQCPor3KH2MD1ngHaE8?rs=1&pid=ImgDetMain')
+# places = CateringPlace.objects.filter(image='image/upload/catering_places/caf.jpg')
+# for place in places:
+#     categories = place.categories.split(',')  # Convert categories string into a list
+#     formatted_data = [', '.join(word.strip("[]' ") for word in item.split(",")) for item in categories]
+#     formatted_data = formatted_data[::-1]
+#     for category in formatted_data:
+#         category = category.strip()  # Remove extra spaces
+#         if category in CATEGORY_DEFAULT_IMAGES:
+#             place.image = CATEGORY_DEFAULT_IMAGES[category]  # Assign default image
+#             place.save()  # Save changes
+#             break  # Stop after the first match
+
+# print("Updated all records with default images!")
+#from cities.models import CateringPlace
+
+# Check if any records still have the default placeholder image
+# print(CateringPlace.objects.filter(image='catering_places/caf.jpg').count())
+
+
+# data = [
+#     "['catering'", " 'catering.restaurant']",
+#     "['catering'", " 'catering.bar']",
+#     "['catering'", " 'catering.cafe']",
+#     "['catering'", " 'catering.bar']",
+#     "['catering'", " 'catering.restaurant']",
+# ]
+
+# formatted_data = [', '.join(word.strip("[]' ") for word in item.split(",")) for item in data]
+
+# for line in formatted_data:
+#     print(line)
+
+
+
+# places = Accommodation.objects.filter(image='catering_places/caf.jpg')
+# for place in places:
+#     categories = place.categories.split(',')  # Convert categories string into a list
+#     formatted_data = [', '.join(word.strip("[]' ") for word in item.split(",")) for item in categories]
+#     formatted_data = formatted_data[::-1]
+#     for category in formatted_data:
+#         category = category.strip()  # Remove extra spaces
+#         if category in ACCOMMODATION_DEFAULT_IMAGES:
+#             place.image = ACCOMMODATION_DEFAULT_IMAGES[category]  # Assign default image
+#             place.save()  # Save changes
+#             break  # Stop after the first match
+
+
+# places = EntertainmentPlace.objects.filter(image='catering_places/caf.jpg')
+# for place in places:
+#     categories = place.categories.split(',')  # Convert categories string into a list
+#     formatted_data = [', '.join(word.strip("[]' ") for word in item.split(",")) for item in categories]
+#     formatted_data = formatted_data[::-1]
+#     for category in formatted_data:
+#         category = category.strip()  # Remove extra spaces
+#         if category in ENTERTAINMENT_DEFAULT_IMAGES:
+#             place.image = ENTERTAINMENT_DEFAULT_IMAGES[category]  # Assign default image
+#             place.save()  # Save changes
+#             break  # Stop after the first match
