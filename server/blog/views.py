@@ -89,14 +89,15 @@ class AddLike(APIView):
     permission_classes = [IsAuthenticated]
     def post(self,request,id):
         blog = get_object_or_404(Blog,id=id)
-        
+    
         record = Like.objects.filter(blog=blog,author=request.user).first()
         
         if record is not None:
             return Response({"Error":"you cannot make more than one like"},status=status.HTTP_403_FORBIDDEN)
+        
         else:
             Notification.objects.create(user=self.request.user,admin=blog.author,blog=blog,message=f'{self.request.user} has liked your blog')
-            Like.objects.create(blog=blog,author=request.user)
+            Like.objects.create(blog=blog,author=request.user,is_like=True)
             return Response(Like.objects.filter(blog=blog).count(),status=status.HTTP_200_OK)
 
         

@@ -2,15 +2,23 @@ from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import get_user_model
 from rest_framework_simplejwt.token_blacklist.models import OutstandingToken,BlacklistedToken
+from django.conf import settings
 User = get_user_model()
 class RegisterSerializer(serializers.ModelSerializer):
     ## for security to prevent returning the password through the api
     password = serializers.CharField(write_only=True,min_length=8)
-
+    image_url = serializers.SerializerMethodField()
     class Meta:
         model = User
-        fields = ['id','username','email','password','gender','phone_no','country','first_name','last_name']
-        
+        fields = ['id','username','email','password','gender','phone_no','country','first_name','last_name','image_url','image']
+        extra_kwargs = {
+            'image':{'required': False, 'allow_null': True}
+        }
+    def get_image_url(self,obj):
+        if obj.image:
+            return settings.MEDIA_URL + str(obj.image)
+        return None
+
 ## override the function create in order to make the password hashed
     def create(self,validated_data):
         user = User.objects.create_user(**validated_data)
