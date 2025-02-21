@@ -9,7 +9,7 @@ class Blog(models.Model):
     name = models.CharField(max_length=100)
     author = models.ForeignKey(User,on_delete=models.CASCADE,related_name="user_blogs")
     description = models.TextField()
-    city = models.ForeignKey(City,on_delete=models.CASCADE,related_name="city_blogs")
+    city = models.CharField(max_length=150)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     image = CloudinaryField('image',default = 'https://res.cloudinary.com/djibubqdg/image/upload/v1739908442/pvs4pbsiimdivm3qlzb8.jpg')

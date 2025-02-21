@@ -29,13 +29,19 @@ class CreateBlog(ModelViewSet):
     def destroy(self, request, *args, **kwargs):
         blog_id = kwargs.get('id')
         blog = get_object_or_404(Blog,id=blog_id)
-        if blog.author == request.user:
-            return super().destroy(blog)
-        return Response({"message":"the post was deleted successfully"},status=status.HTTP_200_OK)
-        return Response({"Error":"you dont have access to delete this post"},status=status.HTTP_401_UNAUTHORIZED)
         
-        
-    
+
+
+        if blog.author != request.user:
+            return Response({"Error": "You don't have access to delete this post"}, status=status.HTTP_403_FORBIDDEN)
+
+        self.perform_destroy(blog) 
+        return Response({"message": "The post was deleted successfully"}, status=status.HTTP_200_OK)
+
+    def perform_destroy(self, instance):
+        instance.delete()  
+
+       
 class CommentView(ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Comment.objects.all()

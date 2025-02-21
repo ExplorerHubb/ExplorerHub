@@ -118,6 +118,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(hours=1),  # Extend access token to 1 hour
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=7),  # Allow refresh for 7 days
+    "ROTATE_REFRESH_TOKENS": True,  # Issue a new refresh token on each use
+    "BLACKLIST_AFTER_ROTATION": True,  # Blacklist old refresh tokens
+    "AUTH_HEADER_TYPES": ("Bearer",),  # Ensure token is passed as "Bearer <token>"
+}
+
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
