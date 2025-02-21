@@ -27,6 +27,9 @@ class CustomUser(AbstractUser):
             self.image = set_user_photo(self.gender)
         super().save(*args,**kwargs)
 
+    def __str__(self):
+        return self.username
+
     
 
     
