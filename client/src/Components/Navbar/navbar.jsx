@@ -57,13 +57,15 @@ const Navbar = ({ isAuthenticated, onLogout }) => {
 
         {/* Auth Buttons (Desktop) */}
         <div className='hidden lg:flex items-center space-x-4'>
-          <div className='relative group hidden sm:block'>
+          {/* Search bar */}
+          {/* <div className='relative group hidden sm:block'>
             <input type="text" placeholder='Search' className='w-[100px] text-sm sm:w-[100px] 
             group-hover:w-[200px] transition-all duration-300 rounded-xl border border-grey-300 
             px-2 py-1 focus:outline-none focus:border-2 focus:border-primary ' />
             <IoIosSearch className='text-gray-500 group-hover:text-secondary absolute top-1/2 
             -translate-y-1/2 right-3' />
-          </div>
+          </div> */}
+
           <Link to=''><MdFavoriteBorder className='w-[20px] h-[20px] text-white transition transform
            hover:scale-110 ease-out duration-300 ' /></Link>
           {isAuthenticated ? (
