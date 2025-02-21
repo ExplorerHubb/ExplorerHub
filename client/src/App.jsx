@@ -7,6 +7,12 @@ import Profile from './Pages/Profile/Profile.jsx'
 import InfoCity from './Pages/InfoCity/infoCity.jsx'
 import Category from './Pages/Category/category.jsx'
 import UpdateProfile from './Pages/UpdateProfile/updateProfile.jsx'
+import CategoriesCities from './Pages/CategoriesCities/categoriesCities.jsx'
+import Blogs from './Pages/Blogs/blogs.jsx'
+import CreateBlog from './Pages/CreateBlog/createBlog.jsx'
+import EditBlog from './Pages/EditBlog/editBlog.jsx'
+import BlogDetails from './Pages/BlogDetails/blogDetails.jsx'
+import BlogsUser from './Pages/BlogsUser/BlogsUser.jsx'
 
 function App() {
 
@@ -34,6 +40,12 @@ function App() {
           <Route path="/city/:cityName" element={<InfoCity />} />
           <Route path="/category/:categoryName" element={<Category />} />
           <Route path="/update-profile" element={isAuthenticated ? <UpdateProfile /> : <Login onAuthSuccess={handleAuthSuccess}/>} />
+          <Route path="/city/:cityName/:categoryName" element={<CategoriesCities />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/create" element={isAuthenticated ? <CreateBlog /> : <Login onAuthSuccess={handleAuthSuccess} />} />
+          <Route path="/blogs/edit-blog/:blogId" element={<EditBlog />} />
+          <Route path="/blogs/:blogId" element={<BlogDetails />} />
+          <Route path="/blogs-user" element={isAuthenticated ? <BlogsUser /> : <Login onAuthSuccess={handleAuthSuccess} />} />
         </Routes>
       </div>
     </Router>

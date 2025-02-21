@@ -5,21 +5,16 @@ import { FiMenu } from "react-icons/fi";
 import Sidebar from "../../Components/Sidebar/Sidebar.jsx";
 import profilepic from "../../assets/profile.png";
 
-const ProfileContent = ({ user, profilePicture, handleProfilePictureChange }) => {
+const ProfileContent = ({ user }) => {
   return (
     <div className="bg-white p-6 rounded-xl border w-full max-w-lg mx-auto">
       <h2 className="text-2xl font-bold mb-4">Profile</h2>
       <div className="flex flex-col items-center mb-6">
         <div className="relative">
           <img
-            src={user?.image_url || profilePicture || profilepic}
+            src={user?.image_url || profilepic}
             alt="Profile"
             className="w-44 h-52 rounded-lg object-cover"
-          />
-          <input
-            type="file"
-            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-            onChange={handleProfilePictureChange}
           />
         </div>
         <h3 className="text-xl font-semibold mt-2">{user?.first_name} {user?.last_name}</h3>
@@ -48,7 +43,6 @@ const ProfileContent = ({ user, profilePicture, handleProfilePictureChange }) =>
 const profile = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [user, setUser] = useState(null);
-  const [profilePicture, setProfilePicture] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -63,7 +57,7 @@ const profile = () => {
           headers: { Authorization: `Token ${token}` },
         });
   
-        console.log("User data:", response.data); // Debugging
+        // console.log("User data:", response.data); // Debugging
         setUser(response.data);
       } catch (error) {
         console.error("Error fetching user:", error.response?.data || error.message);
@@ -78,17 +72,6 @@ const profile = () => {
     navigate("/login");
   };
 
-  const handleProfilePictureChange = (event) => { // Define handleProfilePictureChange
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setProfilePicture(reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
   return (
     <div className="flex h-screen bg-gray-100">
     <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} handleLogout={handleLogout} />
@@ -96,7 +79,7 @@ const profile = () => {
       <button className="lg:hidden" onClick={() => setSidebarOpen(true)}>
         <FiMenu size={20} />
       </button>
-      <ProfileContent user={user} profilePicture={profilePicture} handleProfilePictureChange={handleProfilePictureChange} />
+      <ProfileContent user={user} />
     </div>
   </div>
   );
