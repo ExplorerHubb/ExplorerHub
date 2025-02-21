@@ -23,4 +23,10 @@ class Like(models.Model):
     blog = models.ForeignKey(Blog,on_delete=models.CASCADE,related_name='blog_likes')
     author = models.ForeignKey(User,on_delete=models.CASCADE)
     
-
+class Notification(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    admin = models.ForeignKey(User,on_delete=models.CASCADE,related_name='my_notification')
+    blog = models.ForeignKey(Blog,on_delete=models.CASCADE)
+    message = models.CharField(max_length=500) 
+    def __str__(self):
+        return self.message

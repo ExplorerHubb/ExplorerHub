@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Blog,Comment
+from .models import Blog,Comment,Notification
 from cities.models import City
 
 
@@ -21,5 +21,10 @@ class BlogCommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Blog
         fields = ['blog_comments']
+
+class NotificationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Notification
+        fields = ['message']
 
     

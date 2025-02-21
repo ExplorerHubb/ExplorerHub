@@ -15,10 +15,14 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
-class AddExperience(CreateAPIView):
-    queryset = Experience.objects.all()
-    serializer_class = ExperienceSerializer
+class MyExperience(APIView):
+    def get(self,request):
+        data = get_object_or_404(User,id=request.user.id)
+        serializer = Experience1Serializer(data)
+        return Response(serializer.data,status=status.HTTP_200_OK)
 
+
+    
 class GetUserPlace(APIView):
     permission_classes=[IsAuthenticated]
     def get(self,request):
@@ -41,9 +45,12 @@ class AddExperience(APIView):
         if experience not in list:
             return Response({"error":"Invalid choice"},status=status.HTTP_400_BAD_REQUEST)
         record, created = Experience.objects.get_or_create(category = experience)
-        record.user.remove(request.user)  # Add experience to ManyToManyField
-        return Response({"message":"the Experience was added succussfully"},status=status.HTTP_200_OK)
-    
+        record.user.add(request.user)  # Add experience to ManyToManyField
+        if created:
+            return Response({"message":"the Experience was added succussfully"},status=status.HTTP_200_OK)
+        else :
+            return Response({"message":"this Experience was already added"},status=status.HTTP_400_BAD_REQUEST)
+        
 class RemoveExperience(APIView):
     permission_classes = [IsAuthenticated]
     def delete(self,request,experience):
