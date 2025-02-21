@@ -57,10 +57,11 @@ class AccommodationView(APIView):
 
 
 class CateringCategoriesView(APIView):
-    def get(self,request,type,city):
+    def get(self,request,city,type):
         categories = ['catering','restaurant','bar','cafe','fast_food','building.catering']
         if type not in categories:
             return Response({'error':'cannot find this type of category'},status=status.HTTP_400_BAD_REQUEST)
+            
         if type == 'catering':
             data = CateringPlace.objects.filter(name=city)
         else:
@@ -72,7 +73,7 @@ class CateringCategoriesView(APIView):
         return Response(serializer.data,status=status.HTTP_200_OK)
 
 class AccomodationCategoriesView(APIView):
-    def get(self,request,type,city):
+    def get(self,request,city,type):
         categories = ['accommodation','hotel','hostel','apartment','motel','guest_house','hut']
         if type not in categories:
             return Response({'error':'cannot find this type of category'},status=status.HTTP_400_BAD_REQUEST)
