@@ -12,6 +12,7 @@ const navLinks = [
   { name: 'About', path: 'about', isScroll: true },
   { name: 'Cities', path: 'explore-cities' , isScroll: true },
   { name: 'Categories', path: 'categories' , isScroll: true },
+  {name: 'Blogs', path: '/blogs'}
 ];
 
 const Navbar = ({ isAuthenticated, onLogout }) => {
