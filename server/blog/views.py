@@ -84,7 +84,7 @@ class AddLike(APIView):
             return Response({"Error":"you cannot make more than one like"},status=status.HTTP_403_FORBIDDEN)
         else:
             Like.objects.create(blog=blog,author=request.user)
-            return Response(Like.objects.count(),status=status.HTTP_200_OK)
+            return Response(Like.objects.filter(blog=blog).count(),status=status.HTTP_200_OK)
 
         
         
@@ -93,7 +93,7 @@ class RemoveLike(APIView):
     def delete(self,request,id):
         blog = get_object_or_404(Blog,id=id)
         like = get_object_or_404(Like,blog=blog,author=request.user)
-        notification = Notification.objects.get(user=self.request.user,admin=blog.author,blog=blog,message=f'{self.request.user} has liked your blog')
+        notification = Notification.objects.filter(blog=blog).get(user=self.request.user,admin=blog.author,blog=blog,message=f'{self.request.user} has liked your blog')
         notification.delete()
         
         like.delete()
