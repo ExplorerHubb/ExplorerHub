@@ -22,10 +22,22 @@ class CreateBlog(ModelViewSet):
     def perform_create(self, serializer):
         return serializer.save(author=self.request.user)
     
-    #it is used when updating  existing ones
+     #it is used when updating  existing ones
     def perform_update(self, serializer):
         return serializer.save(author=self.request.user)
     
+
+
+    def update(self,request,*args,**kwargs):
+        blog_id = kwargs.get('id')
+        blog = get_object_or_404(Blog,id=blog_id)
+    
+        if blog.author != request.user:
+            return Response({"Error": "You don't have access to Edit this post"}, status=status.HTTP_403_FORBIDDEN)
+
+        return super().update(request, *args, **kwargs)
+        
+   
     def destroy(self, request, *args, **kwargs):
         blog_id = kwargs.get('id')
         blog = get_object_or_404(Blog,id=blog_id)
