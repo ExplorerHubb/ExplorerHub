@@ -45,7 +45,7 @@ class CateringPlace(models.Model):
 
     name = models.CharField(max_length=200,null=True)
     country_code = models.CharField(max_length=10)
-    city = models.ForeignKey(City,on_delete=models.CASCADE,related_name='city_place')
+    city = models.ForeignKey(City,on_delete=models.CASCADE,related_name='catering_place')
     district = models.TextField(null=True,blank=True)
     suburb = models.TextField(null=True,blank=True)
     street = models.TextField(null=True,blank=True)
@@ -142,7 +142,7 @@ class ShoppingMallsPlace(models.Model):
 class Accommodation(models.Model):
     name = models.CharField(max_length=200,null=True)
     country_code = models.CharField(max_length=10)
-    city = models.ForeignKey(City,on_delete=models.CASCADE,related_name='accommodation')
+    city = models.ForeignKey(City,on_delete=models.CASCADE,related_name='accommodation_place')
     district = models.TextField(null=True,blank=True)
     suburb = models.TextField(null=True,blank=True)
     street = models.TextField(null=True,blank=True)

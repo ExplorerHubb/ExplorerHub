@@ -59,10 +59,10 @@ class CitySerializer(serializers.ModelSerializer):
         fields = ['name','funfact','type','famous_food']
     
 class CityCateringSerializer(serializers.ModelSerializer):
-    city_place = CateringSerializer(many=True,read_only=True)
+    catering_place = CateringSerializer(many=True,read_only=True)
     class Meta:
         model = City
-        fields = ['city_place']
+        fields = ['catering_place']
 
 
 class CityEntertainmentSerializer(serializers.ModelSerializer):
@@ -92,8 +92,8 @@ class AccommodationSerializer(serializers.ModelSerializer):
 
 
 class CityAccommodationSerializer(serializers.ModelSerializer):
-    accommodation = AccommodationSerializer(many=True,read_only=True)
+    accommodation_place = AccommodationSerializer(many=True,read_only=True)
     class Meta:
         model = City
-        fields = ['accommodation']
+        fields = ['accommodation_place']
 

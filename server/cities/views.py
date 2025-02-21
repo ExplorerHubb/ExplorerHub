@@ -44,6 +44,7 @@ class CityEntertainmentView(APIView):
         return Response(city_data.data, status=status.HTTP_200_OK)
 
 class ShoppingView(APIView):
+    
     def get(self,request,name):
         city = get_object_or_404(City,name=name)
         city_data = CityShoppingSerializer(city)
