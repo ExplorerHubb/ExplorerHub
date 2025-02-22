@@ -33,7 +33,7 @@ function EditBlog() {
           const data = await response.json();
           setName(data.name);
           setDescription(data.description);
-          setCity(data.city); // Assuming city is stored as an ID
+          setCity(data.city); 
         } else {
           console.error("Failed to fetch blog data");
         }

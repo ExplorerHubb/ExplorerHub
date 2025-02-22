@@ -38,10 +38,10 @@ function BlogDetails() {
       })
       .then((data) => {
         if (Array.isArray(data.blog_comments)) {
-          setComments(data.blog_comments); // Extract the array correctly
+          setComments(data.blog_comments); 
         } else {
           console.error("Unexpected response format:", data);
-          setComments([]); // Prevent errors if the response is not as expected
+          setComments([]); 
         }
       })
       .catch((error) => console.error("Error fetching comments:", error));
@@ -82,7 +82,7 @@ function BlogDetails() {
             <div className="max-w-sm lg:max-w-xl w-full mx-auto p-6 mt-10 lg:ml-80 xl:ml-auto xl:mr-60
              lg:mt-4 bg-white shadow-lg rounded-lg">
                 <h1 className="text-3xl font-bold mb-4">{blog.name}</h1>
-                <p className="text-gray-600 mb-2">By {blog.author}</p>
+                <p className="text-gray-600 mb-2">By {blog.author.username}</p>
                 <p className="text-gray-500 mb-2">City: {blog.city}</p>
                 <p className="text-gray-500 mb-4">Posted on: {new Date(blog.created_at).toLocaleDateString()}</p>
                 <p className="mb-6 text-gray-700 break-words overflow-hidden">
@@ -93,7 +93,7 @@ function BlogDetails() {
                     {comments.length > 0 ? (
                     comments.map((comment) => (
                         <div key={comment.id} className="border p-3 rounded-lg bg-white">
-                        <p className="font-semibold">{comment.author}</p>
+                        <p className="font-semibold">{comment.author.username}</p>
                         <p className="break-words overflow-hidden">{comment.content}</p>
                         </div>
                     ))

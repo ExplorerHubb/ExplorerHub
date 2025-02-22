@@ -34,7 +34,7 @@ function BlogsUser() {
         if (Array.isArray(data)) {
           setBlogs(
             data
-              .filter((blog) => blog.author === user_id) // تصفية المدونات الخاصة بالمستخدم فقط
+              .filter((blog) => blog.author === user_id)
               .map((blog) => ({
                 ...blog,
                 liked: blog.user_liked || false,
