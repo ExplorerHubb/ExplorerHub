@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.png';
-import RegisterForm from '../../assets/registerForm.gif';
+import RegisterForm from '../../assets/RegisterForm.gif';
 
 const Register = ({ onAuthSuccess }) => {
     const [formData, setFormData] = useState({
