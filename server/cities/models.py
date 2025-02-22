@@ -78,9 +78,6 @@ ACCOMMODATION_DEFAULT_IMAGES = {
 }
 
 
-
-
-
 ENTERTAINMENT_DEFAULT_IMAGES = {
     'entertainment': 'https://res.cloudinary.com/djibubqdg/image/upload/v1740064787/xid1v4x0savn1qydxckq.jpg',
     'entertainment.museum': 'https://res.cloudinary.com/djibubqdg/image/upload/v1740064843/tj3zef0lctfteuefnj8m.jpg',
@@ -160,67 +157,3 @@ class Accommodation(models.Model):
     def __str__(self):
         return self.name
 
-
-#     from cities.models import CateringPlace, CATEGORY_DEFAULT_IMAGES
-
-# # Get all records that have no image or the placeholder image
-# places = CateringPlace.objects.filter(image='catering_places/caf.jpg')
-# places = CateringPlace.objects.filter(image='https://th.bing.com/th/id/OIP.1EeuwRUzQCPor3KH2MD1ngHaE8?rs=1&pid=ImgDetMain')
-# places = CateringPlace.objects.filter(image='image/upload/catering_places/caf.jpg')
-# for place in places:
-#     categories = place.categories.split(',')  # Convert categories string into a list
-#     formatted_data = [', '.join(word.strip("[]' ") for word in item.split(",")) for item in categories]
-#     formatted_data = formatted_data[::-1]
-#     for category in formatted_data:
-#         category = category.strip()  # Remove extra spaces
-#         if category in CATEGORY_DEFAULT_IMAGES:
-#             place.image = CATEGORY_DEFAULT_IMAGES[category]  # Assign default image
-#             place.save()  # Save changes
-#             break  # Stop after the first match
-
-# print("Updated all records with default images!")
-#from cities.models import CateringPlace
-
-# Check if any records still have the default placeholder image
-# print(CateringPlace.objects.filter(image='catering_places/caf.jpg').count())
-
-
-# data = [
-#     "['catering'", " 'catering.restaurant']",
-#     "['catering'", " 'catering.bar']",
-#     "['catering'", " 'catering.cafe']",
-#     "['catering'", " 'catering.bar']",
-#     "['catering'", " 'catering.restaurant']",
-# ]
-
-# formatted_data = [', '.join(word.strip("[]' ") for word in item.split(",")) for item in data]
-
-# for line in formatted_data:
-#     print(line)
-
-
-
-# places = Accommodation.objects.filter(image='catering_places/caf.jpg')
-# for place in places:
-#     categories = place.categories.split(',')  # Convert categories string into a list
-#     formatted_data = [', '.join(word.strip("[]' ") for word in item.split(",")) for item in categories]
-#     formatted_data = formatted_data[::-1]
-#     for category in formatted_data:
-#         category = category.strip()  # Remove extra spaces
-#         if category in ACCOMMODATION_DEFAULT_IMAGES:
-#             place.image = ACCOMMODATION_DEFAULT_IMAGES[category]  # Assign default image
-#             place.save()  # Save changes
-#             break  # Stop after the first match
-
-
-# places = EntertainmentPlace.objects.filter(image='catering_places/caf.jpg')
-# for place in places:
-#     categories = place.categories.split(',')  # Convert categories string into a list
-#     formatted_data = [', '.join(word.strip("[]' ") for word in item.split(",")) for item in categories]
-#     formatted_data = formatted_data[::-1]
-#     for category in formatted_data:
-#         category = category.strip()  # Remove extra spaces
-#         if category in ENTERTAINMENT_DEFAULT_IMAGES:
-#             place.image = ENTERTAINMENT_DEFAULT_IMAGES[category]  # Assign default image
-#             place.save()  # Save changes
-#             break  # Stop after the first match

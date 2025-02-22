@@ -23,7 +23,7 @@ class Comment(models.Model):
 class Like(models.Model):
     blog = models.ForeignKey(Blog,on_delete=models.CASCADE,related_name='blog_likes')
     author = models.ForeignKey(User,on_delete=models.CASCADE)
-    is_liked = models.BooleanField(default=False)
+    
     
 class Notification(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
