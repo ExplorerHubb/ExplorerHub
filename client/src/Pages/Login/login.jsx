@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import privacyImage from '../../assets/privacypolicy.gif';
+import privacyImage from '../../assets/Privacypolicy.gif';
 import logo from '../../assets/logo.png';
 
 const login = ({ onAuthSuccess }) => {
