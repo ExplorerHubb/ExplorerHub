@@ -28,7 +28,7 @@ const about = () => {
   return (
     <div id='about' className='py-6 bg-white'>
         <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-12">About Us</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-12">About Us</h2>
         </div>
 
         <div className="flex flex-col gap-12 max-w-6xl mx-auto px-6">

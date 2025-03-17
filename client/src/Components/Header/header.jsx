@@ -16,7 +16,6 @@ const header = () => {
                 Explore
             </button>  
         </div>
-              
     </div>
   )
 }
