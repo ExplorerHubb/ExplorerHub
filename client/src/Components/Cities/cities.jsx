@@ -42,7 +42,7 @@ const Cities = () => {
     };
 
     return (
-        <div className='py-6 bg-white' id='explore-cities'>
+        <div className='relative py-6 bg-white' id='explore-cities'>
             <div className='max-w-6xl mx-auto text-center'>
                 <h1 className='text-4xl font-bold text-gray-900 mb-6'>Explore Cities</h1>
                 <p className='text-gray-600 mb-3'>Discover amazing destinations, their culture, and experiences waiting for you.</p>
